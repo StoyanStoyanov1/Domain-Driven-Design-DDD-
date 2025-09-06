@@ -1,42 +1,65 @@
 import {IAddress} from '../interfaces';
 import { addressType } from "../types";
-import { validator} from '../utils'
+import { validator} from '../utils';
+import { ValueObject} from "../../../shared/domain/valueObject";
 
-export class Address implements IAddress{
-    private readonly _street: addressType.street;
-    private readonly _city: addressType.city;
-    private readonly _country: addressType.country;
-    private readonly _postalCode: addressType.postalCode;
+// Отделен тип файл за по-добра организация
+export type AddressData = {
+    readonly street: addressType.street;
+    readonly city: addressType.city;
+    readonly country: addressType.country;
+    readonly postalCode: addressType.postalCode;
+};
 
-    constructor(street: addressType.street,
-                city: addressType.city,
-                country: addressType.country,
-                postalCode: addressType.postalCode) {
+export class Address extends ValueObject<AddressData> implements IAddress {
 
-        this.validateInput(street, city, country, postalCode);
-        this._street = street;
-        this._city = city;
-        this._country = country;
-        this._postalCode = postalCode;
+    constructor(data: AddressData) {
+        super(data);
     }
 
-    private validateInput(street: addressType.street,
-                     city: addressType.city,
-                     country: addressType.country,
-                     postalCode: addressType.postalCode,): void {
-
-        validator.validateStreet(street)
-        validator.validateCity(city)
-        validator.validateCountry(country)
-        validator.validatePostalCode(postalCode)
+    // Factory method за по-лесно създаване
+    static create(
+        street: addressType.street,
+        city: addressType.city,
+        country: addressType.country,
+        postalCode: addressType.postalCode
+    ): Address {
+        return new Address({
+            street,
+            city,
+            country,
+            postalCode
+        });
     }
 
+    protected validate(value: AddressData): void {
+        validator.validateStreet(value.street);
+        validator.validateCity(value.city);
+        validator.validateCountry(value.country);
+        validator.validatePostalCode(value.postalCode);
+    }
 
+    get street(): addressType.street {
+        return this.value.street;
+    }
 
-    get street() { return this._street; }
-    get city() { return this._city; }
-    get country() { return this._country; }
-    get postalCode() { return this._postalCode; }
-    get toString() { return `${this._street}\n${this._city}, ${this._country}, ${this._postalCode}`; }
+    get city(): addressType.city {
+        return this.value.city;
+    }
 
+    get country(): addressType.country {
+        return this.value.country;
+    }
+
+    get postalCode(): addressType.postalCode {
+        return this.value.postalCode;
+    }
+
+    getFullAddress(): string {
+        return `${this.value.street}, ${this.value.city}, ${this.value.country}, ${this.value.postalCode}`;
+    }
+
+    toString(): string {
+        return this.getFullAddress();
+    }
 }
