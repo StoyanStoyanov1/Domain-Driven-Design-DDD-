@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `EntityId` value object and `EntityIdType` for ID validation in core domain.">
-      <change afterPath="$PROJECT_DIR$/BasicProject/core/domain/object-value/PhoneNumber.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicProject/core/domain/types/PhoneNumberType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicProject/core/domain/types/index.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain.">
+      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/constants/dialCodes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/constants/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/enums/country.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/enums/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/domain/entity/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/core/domain/entity/Profile.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/domain/object-value/BaseProfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/core/domain/object-value/BaseProfile.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/domain/object-value/EntityId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/core/domain/object-value/EntityId.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/domain/object-value/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/core/domain/object-value/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/domain/types/EntityIdType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/core/domain/types/EntityIdType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/domain/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/object-value/PhoneNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/core/domain/object-value/PhoneNumber.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,7 @@
       <updated>1757102987230</updated>
       <workItem from="1757102988308" duration="2010000" />
       <workItem from="1757105541426" duration="1347000" />
-      <workItem from="1757135001324" duration="10057000" />
+      <workItem from="1757135001324" duration="14494000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -110,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757142606481</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain.">
+      <option name="closed" value="true" />
+      <created>1757150053283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757150053283</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize project structure with core domain entities and configuration files." />
     <MESSAGE value="Introduce `EntityId` value object and `EntityIdType` for ID validation in core domain." />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce `EntityId` value object and `EntityIdType` for ID validation in core domain." />
+    <MESSAGE value="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain." />
   </component>
 </project>
