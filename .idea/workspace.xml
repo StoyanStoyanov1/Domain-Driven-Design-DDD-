@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Implement `IMoney` interface for `Money` value object and add `toString` method for representation.">
-      <change afterPath="$PROJECT_DIR$/core/order/domain/interfaces/IAddress.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/interfaces/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/types/addressType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/utils/validator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/utils/validators/addressValidator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/Address.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Address` value object with validation utilities and `IAddress` interface.">
+      <change afterPath="$PROJECT_DIR$/core/profile/domain/entities/Profile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/profile/value-object/ProfileId.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/shared/domain/Entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/shared/domain/valueObject.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/shared/exeptions/DomainExeption.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/shared/utils/hashcode.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/shared/utils/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/value-objects/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +70,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core" />
       <recent name="$PROJECT_DIR$/BasicProject" />
       <recent name="$PROJECT_DIR$/core/domain/object-value" />
     </key>
@@ -92,7 +91,7 @@
       <updated>1757102987230</updated>
       <workItem from="1757102988308" duration="2010000" />
       <workItem from="1757105541426" duration="1347000" />
-      <workItem from="1757135001324" duration="32330000" />
+      <workItem from="1757135001324" duration="38252000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -150,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757168866774</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Introduce `Address` value object with validation utilities and `IAddress` interface.">
+      <option name="closed" value="true" />
+      <created>1757183866218</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757183866218</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +171,7 @@
     <MESSAGE value="Introduce `Money` value object and utilities for currency and amount validation in core domain." />
     <MESSAGE value="Remove redundant `checkCurrency` method from `Money` value object." />
     <MESSAGE value="Implement `IMoney` interface for `Money` value object and add `toString` method for representation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement `IMoney` interface for `Money` value object and add `toString` method for representation." />
+    <MESSAGE value="Introduce `Address` value object with validation utilities and `IAddress` interface." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Address` value object with validation utilities and `IAddress` interface." />
   </component>
 </project>
