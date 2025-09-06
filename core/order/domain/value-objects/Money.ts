@@ -1,8 +1,9 @@
 import {fixNumberToTwo} from "../../shared/utils";
 import {TypeCurrencies} from "../enums"
 import {isCurrency} from "../utils";
+import {IMoney} from "../interfaces";
 
-export class Money {
+export class Money implements IMoney {
     private readonly _amount: number;
     private readonly _currency: TypeCurrencies;
 
@@ -16,7 +17,7 @@ export class Money {
         return this._amount;
     }
 
-    get currency(): string {
+    get currency(): TypeCurrencies {
         return this._currency;
     }
 
@@ -43,6 +44,9 @@ export class Money {
         }
 
         return UpCaseCurrency
+    }
 
-}
+    get toString(): string {
+        return `${this._amount} ${this._currency}`;
+    }
 }
