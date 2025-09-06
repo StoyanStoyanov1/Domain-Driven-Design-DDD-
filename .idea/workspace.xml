@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain.">
-      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/constants/dialCodes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/constants/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/enums/country.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicProject/core/shared/enums/index.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Enhance `PhoneNumber` value object with country code support and dial code validation.">
+      <change afterPath="$PROJECT_DIR$/core/order/domain/enums/Currency.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/enums/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/types/AmountType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/utils/Money.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/utils/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/Money.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/shared/utils/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/shared/utils/numberUtils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/object-value/PhoneNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/BasicProject/core/domain/object-value/PhoneNumber.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +92,7 @@
       <updated>1757102987230</updated>
       <workItem from="1757102988308" duration="2010000" />
       <workItem from="1757105541426" duration="1347000" />
-      <workItem from="1757135001324" duration="14494000" />
+      <workItem from="1757135001324" duration="21654000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -114,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757150053283</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Enhance `PhoneNumber` value object with country code support and dial code validation.">
+      <option name="closed" value="true" />
+      <created>1757154531072</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757154531072</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +136,7 @@
     <MESSAGE value="Initialize project structure with core domain entities and configuration files." />
     <MESSAGE value="Introduce `EntityId` value object and `EntityIdType` for ID validation in core domain." />
     <MESSAGE value="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain." />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain." />
+    <MESSAGE value="Enhance `PhoneNumber` value object with country code support and dial code validation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance `PhoneNumber` value object with country code support and dial code validation." />
   </component>
 </project>
