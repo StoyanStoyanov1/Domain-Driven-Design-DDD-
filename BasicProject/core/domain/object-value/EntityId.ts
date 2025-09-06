@@ -1,4 +1,4 @@
-import { EntityIdType } from '../types/index'
+import { EntityIdType } from '../types'
 
 export class EntityId<T extends EntityIdType> {
     private readonly EntityId: T;
