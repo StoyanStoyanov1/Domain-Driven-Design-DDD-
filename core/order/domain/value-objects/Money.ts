@@ -32,11 +32,6 @@ export class Money {
     }
 
     private getCurrency(currency: string): TypeCurrencies {
-
-        return this.checkCurrency(currency);
-    }
-
-    private checkCurrency(currency: string): TypeCurrencies {
         const UpCaseCurrency = currency ? currency.trim().toUpperCase() : null;
 
         if (!UpCaseCurrency) {
