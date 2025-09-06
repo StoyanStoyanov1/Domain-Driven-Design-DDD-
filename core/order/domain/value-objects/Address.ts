@@ -3,7 +3,6 @@ import { addressType } from "../types";
 import { validator} from '../utils';
 import { ValueObject} from "../../../shared/domain/valueObject";
 
-// Отделен тип файл за по-добра организация
 export type AddressData = {
     readonly street: addressType.street;
     readonly city: addressType.city;
@@ -17,7 +16,6 @@ export class Address extends ValueObject<AddressData> implements IAddress {
         super(data);
     }
 
-    // Factory method за по-лесно създаване
     static create(
         street: addressType.street,
         city: addressType.city,
