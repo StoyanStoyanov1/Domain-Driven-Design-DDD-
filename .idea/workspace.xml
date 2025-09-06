@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Address` value object with validation utilities and `IAddress` interface.">
-      <change afterPath="$PROJECT_DIR$/core/profile/domain/entities/Profile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/profile/value-object/ProfileId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/shared/domain/Entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/shared/domain/valueObject.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/shared/exeptions/DomainExeption.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/shared/utils/hashcode.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/shared/utils/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Entity` base class and `ValueObject` abstraction in the shared domain, along with utilities for object comparison and hashing.">
+      <change beforePath="$PROJECT_DIR$/core/shared/domain/Entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/shared/domain/Entity.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +84,7 @@
       <updated>1757102987230</updated>
       <workItem from="1757102988308" duration="2010000" />
       <workItem from="1757105541426" duration="1347000" />
-      <workItem from="1757135001324" duration="38252000" />
+      <workItem from="1757135001324" duration="38610000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -157,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757183866218</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Introduce `Entity` base class and `ValueObject` abstraction in the shared domain, along with utilities for object comparison and hashing.">
+      <option name="closed" value="true" />
+      <created>1757191273048</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757191273048</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +173,7 @@
     <MESSAGE value="Remove redundant `checkCurrency` method from `Money` value object." />
     <MESSAGE value="Implement `IMoney` interface for `Money` value object and add `toString` method for representation." />
     <MESSAGE value="Introduce `Address` value object with validation utilities and `IAddress` interface." />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Address` value object with validation utilities and `IAddress` interface." />
+    <MESSAGE value="Introduce `Entity` base class and `ValueObject` abstraction in the shared domain, along with utilities for object comparison and hashing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Entity` base class and `ValueObject` abstraction in the shared domain, along with utilities for object comparison and hashing." />
   </component>
 </project>

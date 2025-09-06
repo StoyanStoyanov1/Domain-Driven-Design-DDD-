@@ -1,9 +1,9 @@
 import {hashCode} from "../utils";
 
-abstract class Entity<id>{
-    protected readonly id: id;
+abstract class Entity{
+    protected readonly id: string;
 
-    constructor(id: id) {
+    constructor(id: string) {
         this.id = id;
     }
 
@@ -11,7 +11,7 @@ abstract class Entity<id>{
         return hashCode(this.id);
     }
 
-    equals(other: Entity<id>): boolean {
+    equals(other: Entity): boolean {
         return this.hashCode() === other.hashCode();
     }
 
