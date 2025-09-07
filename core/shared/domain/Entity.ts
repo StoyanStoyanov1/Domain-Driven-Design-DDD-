@@ -1,6 +1,6 @@
 import {hashCode} from "../utils";
 
-abstract class Entity{
+export abstract class Entity{
     protected readonly id: string;
 
     constructor(id: string) {

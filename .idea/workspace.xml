@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Payment` value object: add validation, `IPayment` interface, and `PaymentType` definitions.">
-      <change afterPath="$PROJECT_DIR$/core/order/domain/interfaces/IShipping.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/types/shippingType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/Shipping.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions.">
+      <change afterPath="$PROJECT_DIR$/core/order/domain/entities/Product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/OrderId.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/ProductItemId.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/interfaces/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/value-objects/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/domain/Entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/shared/domain/Entity.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +68,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/user" />
       <recent name="$PROJECT_DIR$/core/shared/utils" />
       <recent name="$PROJECT_DIR$/core" />
       <recent name="$PROJECT_DIR$/BasicProject" />
@@ -94,7 +93,7 @@
       <workItem from="1757105541426" duration="1347000" />
       <workItem from="1757135001324" duration="40440000" />
       <workItem from="1757224385592" duration="1384000" />
-      <workItem from="1757225780070" duration="12155000" />
+      <workItem from="1757225780070" duration="18291000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -208,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757240643472</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions.">
+      <option name="closed" value="true" />
+      <created>1757255085173</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1757255085173</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +235,7 @@
     <MESSAGE value="Refactor `Address` value object: extend `ValueObject` base class, add factory method, and improve data encapsulation." />
     <MESSAGE value="Refactor `Money` value object: extend `ValueObject` base class, introduce factory method, improve validation, and relocate shared utilities." />
     <MESSAGE value="Introduce `Payment` value object: add validation, `IPayment` interface, and `PaymentType` definitions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Payment` value object: add validation, `IPayment` interface, and `PaymentType` definitions." />
+    <MESSAGE value="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions." />
   </component>
 </project>
