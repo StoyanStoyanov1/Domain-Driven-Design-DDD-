@@ -9,12 +9,13 @@ export namespace addressType {
     export type city = cityType;
     export type postalCode = postalCodeType
     export type country = countryType;
+    export type data = {
+        readonly street: addressType.street;
+        readonly city: addressType.city;
+        readonly country: addressType.country;
+        readonly postalCode: addressType.postalCode;
+    }
 }
 
-export type addressData = {
-    readonly street: addressType.street;
-    readonly city: addressType.city;
-    readonly country: addressType.country;
-    readonly postalCode: addressType.postalCode;
-};
+
 

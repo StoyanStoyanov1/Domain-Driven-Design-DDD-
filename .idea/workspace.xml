@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Refactor `Address` value object: extend `ValueObject` base class, add factory method, and improve data encapsulation.">
-      <change afterPath="$PROJECT_DIR$/core/order/domain/types/moneyType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/shared/domain/IValueObject.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Refactor `Money` value object: extend `ValueObject` base class, introduce factory method, improve validation, and relocate shared utilities.">
+      <change afterPath="$PROJECT_DIR$/core/order/domain/interfaces/IPayment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/types/paymentType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/utils/validators/paymentValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/Payment.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/IMoney.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/interfaces/IMoney.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/interfaces/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/order/domain/types/addressType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/types/addressType.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/order/domain/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/utils/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/Address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/value-objects/Address.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/Money.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/order/domain/value-objects/Money.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/shared/utils/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/shared/utils/numberUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/shared/utils/numberUtils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/profile/value-object/ProfileId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/profile/value-object/ProfileId.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/shared/domain/valueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/shared/domain/valueObject.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/shared/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/shared/utils/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,7 @@
       <workItem from="1757105541426" duration="1347000" />
       <workItem from="1757135001324" duration="40440000" />
       <workItem from="1757224385592" duration="1384000" />
-      <workItem from="1757225780070" duration="2214000" />
+      <workItem from="1757225780070" duration="8978000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -198,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757192078451</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Refactor `Money` value object: extend `ValueObject` base class, introduce factory method, improve validation, and relocate shared utilities.">
+      <option name="closed" value="true" />
+      <created>1757228187495</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757228187495</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +221,7 @@
     <MESSAGE value="Introduce `Entity` base class and `ValueObject` abstraction in the shared domain, along with utilities for object comparison and hashing." />
     <MESSAGE value="Refactor `Entity` class: simplify generics by replacing type parameter with `string` for ID handling." />
     <MESSAGE value="Refactor `Address` value object: extend `ValueObject` base class, add factory method, and improve data encapsulation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor `Address` value object: extend `ValueObject` base class, add factory method, and improve data encapsulation." />
+    <MESSAGE value="Refactor `Money` value object: extend `ValueObject` base class, introduce factory method, improve validation, and relocate shared utilities." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor `Money` value object: extend `ValueObject` base class, introduce factory method, improve validation, and relocate shared utilities." />
   </component>
 </project>
