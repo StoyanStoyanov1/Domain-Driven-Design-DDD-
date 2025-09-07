@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions.">
-      <change afterPath="$PROJECT_DIR$/core/order/domain/entities/Product.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/OrderId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/value-objects/ProductItemId.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export.">
+      <change afterPath="$PROJECT_DIR$/core/order/domain/entities/OrderItem.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/order/domain/entities/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/shared/domain/Entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/core/shared/domain/Entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/entities/Product.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,7 @@
       <workItem from="1757105541426" duration="1347000" />
       <workItem from="1757135001324" duration="40440000" />
       <workItem from="1757224385592" duration="1384000" />
-      <workItem from="1757225780070" duration="18291000" />
+      <workItem from="1757225780070" duration="23769000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -215,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757255085173</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export.">
+      <option name="closed" value="true" />
+      <created>1757264272049</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1757264272049</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +243,7 @@
     <MESSAGE value="Refactor `Money` value object: extend `ValueObject` base class, introduce factory method, improve validation, and relocate shared utilities." />
     <MESSAGE value="Introduce `Payment` value object: add validation, `IPayment` interface, and `PaymentType` definitions." />
     <MESSAGE value="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions." />
+    <MESSAGE value="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export." />
   </component>
 </project>
