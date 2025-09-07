@@ -1,4 +1,6 @@
-export abstract class ValueObject<T> {
+import {IValueObject} from "./IValueObject";
+
+export abstract class ValueObject<T> implements IValueObject<T>{
     protected readonly value: T;
 
     constructor(value: T) {

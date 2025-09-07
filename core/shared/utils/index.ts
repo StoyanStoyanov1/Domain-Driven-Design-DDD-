@@ -1,3 +1,7 @@
 import {hashCode} from "./hashcode";
+import {fixNumberToTwo} from "./numberUtils";
 
-export {hashCode};
+export {
+    hashCode,
+    fixNumberToTwo,
+};

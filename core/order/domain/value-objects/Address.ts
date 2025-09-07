@@ -1,18 +1,11 @@
 import {IAddress} from '../interfaces';
-import { addressType } from "../types";
+import { addressType, addressData } from "../types";
 import { validator} from '../utils';
 import { ValueObject} from "../../../shared/domain/valueObject";
 
-export type AddressData = {
-    readonly street: addressType.street;
-    readonly city: addressType.city;
-    readonly country: addressType.country;
-    readonly postalCode: addressType.postalCode;
-};
+export class Address extends ValueObject<addressData> implements IAddress {
 
-export class Address extends ValueObject<AddressData> implements IAddress {
-
-    constructor(data: AddressData) {
+    constructor(data: addressData) {
         super(data);
     }
 
@@ -30,7 +23,7 @@ export class Address extends ValueObject<AddressData> implements IAddress {
         });
     }
 
-    protected validate(value: AddressData): void {
+    protected validate(value: addressData): void {
         validator.validateStreet(value.street);
         validator.validateCity(value.city);
         validator.validateCountry(value.country);

@@ -1,5 +1,7 @@
-import {addressType} from "./addressType";
-
+import {addressType, addressData} from "./addressType";
+import {moneyData} from "./moneyType";
 export {
-    addressType
+    addressType,
+    addressData,
+    moneyData
 };
