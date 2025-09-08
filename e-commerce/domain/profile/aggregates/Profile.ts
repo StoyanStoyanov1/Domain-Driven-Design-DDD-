@@ -1,5 +1,7 @@
+import {ProfileId} from "../value-object";
+
 class Profile {
-    private readonly id: string;
+    private readonly id: ProfileId;
     private readonly name: string;
     private readonly email: string;
     private readonly phoneNumber: string;
@@ -9,8 +11,28 @@ class Profile {
     private readonly createdAt: Date;
 
     readonly updatedAt: Date;
-
     
+    constructor(
+        id: ProfileId,
+        name: string,
+        email: string,
+        phoneNumber: string,
+        username: string,
+        dateOfBirth: Date,
+        address: string,
+        createdAt: Date,
+        updatedAt: Date
+    ) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.username = username;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 }
 
 
