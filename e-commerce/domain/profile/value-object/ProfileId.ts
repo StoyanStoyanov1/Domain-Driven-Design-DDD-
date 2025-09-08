@@ -1,6 +1,6 @@
-import { ValueObject } from "../../shared/domain/ValueObject";
+import { SimpleValueObject } from "../../shared/domain/SimpleValueObject";
 
-export class ProfileId extends ValueObject<string> {
+export class ProfileId extends SimpleValueObject<string> {
     static readonly ERROR_MESSAGE_VALUE_IS_EMPTY = 'Id cannot be empty';
 
     constructor(id: string) {

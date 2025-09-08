@@ -1,27 +1,25 @@
-import { IValueObject } from "./IValueObject";
-
-export abstract class ValueObject<T> implements IValueObject<T> {
+export abstract class SimpleValueObject<T> {
     protected readonly value: T;
 
-    constructor(value: T) {
+    protected constructor(value: T) {
         this.validate(value);
         this.value = value;
     }
 
     protected abstract validate(value: T): void;
 
-    getValue(): T {
+    public getValue(): T {
         return this.value;
     }
 
-    equals(other: ValueObject<T>): boolean {
+    public equals(other: SimpleValueObject<T>): boolean {
         if (!(other instanceof this.constructor)) {
             return false;
         }
         return this.value === other.value;
     }
 
-    toString(): string {
+    public toString(): string {
         return String(this.value);
     }
 }

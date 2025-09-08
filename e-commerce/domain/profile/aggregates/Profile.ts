@@ -1,8 +1,8 @@
-import {ProfileId} from "../value-object";
+import {ProfileId, Name} from "../value-object";
 
 class Profile {
     private readonly id: ProfileId;
-    private readonly name: string;
+    private readonly name: Name;
     private readonly email: string;
     private readonly phoneNumber: string;
     private readonly username: string;
@@ -14,7 +14,7 @@ class Profile {
     
     constructor(
         id: ProfileId,
-        name: string,
+        name: Name,
         email: string,
         phoneNumber: string,
         username: string,
@@ -36,7 +36,7 @@ class Profile {
 }
 
 
-// Id ( UUID )
+// Id ( UUID ) - ready
 // First name
 // Middle Name ( Optional )
 // Last Name
