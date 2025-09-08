@@ -1,6 +1,7 @@
-import {valueObject }from "../../../shared/domain/value-object/ValueObject";
+import { ValueObject } from "../../shared/domain/ValueObject";
 import { NameType } from "../types";
-export class Name extends ComplexValueObject<NameType> {
+import { Result } from "../../shared/core/Result";
+export class Name extends ValueObject<NameType> {
     private readonly firstName: string;
     private readonly middleName?: string;
     private readonly lastName: string;
@@ -15,6 +16,14 @@ export class Name extends ComplexValueObject<NameType> {
         }
         if (!value.lastName || value.lastName.trim() === '') {
             throw new Error('Last name cannot be empty');
+        }
+    }
+
+      public static create(obj: NameType): Result<Name> {
+        try {
+            return Result.ok<Name>(new Name(obj.firstName, obj.lastName, obj.middleName));
+        } catch (error) {
+            return Result.fail<Name>(error.message);
         }
     }
 
@@ -34,5 +43,6 @@ export class Name extends ComplexValueObject<NameType> {
 
     getMiddleName(): string | undefined {
         return this.middleName;
-    } 
+    }
+
 }
