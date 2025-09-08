@@ -1,4 +1,4 @@
-import { CountryIsoCode } from '../enums/index';
+import { CountryIsoCode } from '../enums';
 
 export const DialCodes: Record<CountryIsoCode, string> = {
     [CountryIsoCode.BG]: '+359',

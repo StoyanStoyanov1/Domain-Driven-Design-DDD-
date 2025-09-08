@@ -4,11 +4,55 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export.">
-      <change afterPath="$PROJECT_DIR$/core/order/domain/entities/OrderItem.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/order/domain/entities/index.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="Introduce `OrderItem` entity to replace `Product` entity, adding validation, calculation utilities, and factory methods.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/order/domain/entities/Product.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/entity/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/entity/Profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/object-value/BaseProfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/object-value/BaseProfile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/object-value/EntityId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/object-value/EntityId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/object-value/PhoneNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/object-value/PhoneNumber.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/object-value/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/object-value/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/types/EntityIdType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/types/EntityIdType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/types/PhoneNumberType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/types/PhoneNumberType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/domain/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/domain/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/shared/constants/dialCodes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/shared/constants/dialCodes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/shared/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/shared/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/shared/enums/country.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/shared/enums/country.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BasicProject/core/shared/enums/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/BasicProject/core/shared/enums/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/entities/OrderItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/entities/OrderItem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/entities/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/entities/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/enums/Currency.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/enums/Currency.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/enums/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/enums/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/IAddress.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/interfaces/IAddress.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/IMoney.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/interfaces/IMoney.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/IPayment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/interfaces/IPayment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/IShipping.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/interfaces/IShipping.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/interfaces/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/interfaces/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/types/addressType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/types/addressType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/types/moneyType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/types/moneyType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/types/paymentType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/types/paymentType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/types/shippingType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/types/shippingType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/utils/Money.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/utils/Money.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/utils/validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/utils/validator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/utils/validators/addressValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/utils/validators/addressValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/utils/validators/paymentValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/utils/validators/paymentValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/Address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/value-objects/Address.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/Money.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/value-objects/Money.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/OrderId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/value-objects/OrderId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/Payment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/value-objects/Payment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/ProductItemId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/value-objects/ProductItemId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/Shipping.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/value-objects/Shipping.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/order/domain/value-objects/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/order/domain/value-objects/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/profile/domain/entities/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/profile/domain/entities/Profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/profile/value-object/ProfileId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/profile/value-object/ProfileId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/domain/Entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/shared/domain/Entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/domain/IValueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/shared/domain/IValueObject.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/domain/valueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/shared/domain/valueObject.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/exeptions/DomainExeption.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/shared/exeptions/DomainExeption.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/utils/hashcode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/shared/utils/hashcode.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/shared/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/shared/utils/numberUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ddd-exercises/core/shared/utils/numberUtils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +111,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ddd-exercises" />
       <recent name="$PROJECT_DIR$/test/user" />
       <recent name="$PROJECT_DIR$/core/shared/utils" />
       <recent name="$PROJECT_DIR$/core" />
       <recent name="$PROJECT_DIR$/BasicProject" />
-      <recent name="$PROJECT_DIR$/core/domain/object-value" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -92,7 +136,10 @@
       <workItem from="1757105541426" duration="1347000" />
       <workItem from="1757135001324" duration="40440000" />
       <workItem from="1757224385592" duration="1384000" />
-      <workItem from="1757225780070" duration="23769000" />
+      <workItem from="1757225780070" duration="24100000" />
+      <workItem from="1757311449866" duration="204000" />
+      <workItem from="1757311681197" duration="1296000" />
+      <workItem from="1757330639904" duration="68000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -222,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757264272049</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Introduce `OrderItem` entity to replace `Product` entity, adding validation, calculation utilities, and factory methods.">
+      <option name="closed" value="true" />
+      <created>1757272636192</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1757272636192</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +299,7 @@
     <MESSAGE value="Introduce `Payment` value object: add validation, `IPayment` interface, and `PaymentType` definitions." />
     <MESSAGE value="Introduce `Shipping` value object: add validation, `IShipping` interface, and `ShippingType` definitions." />
     <MESSAGE value="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export." />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export." />
+    <MESSAGE value="Introduce `OrderItem` entity to replace `Product` entity, adding validation, calculation utilities, and factory methods." />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce `OrderItem` entity to replace `Product` entity, adding validation, calculation utilities, and factory methods." />
   </component>
 </project>
