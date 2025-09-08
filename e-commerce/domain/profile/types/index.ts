@@ -1,5 +1,5 @@
-import { NameProps } from "./NameProps";
+import { NameType } from "./NameType";
 
 export {
-    NameProps
+    NameType
 }

@@ -1,4 +1,4 @@
-export type NameProps = {
+export type NameType = {
     firstName: string;
     middleName?: string;
     lastName: string;

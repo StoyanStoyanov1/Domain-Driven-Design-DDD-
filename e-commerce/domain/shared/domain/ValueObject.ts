@@ -1,4 +1,4 @@
-export abstract class SimpleValueObject<T> {
+export abstract class ValueObject<T> {
     protected readonly value: T;
 
     protected constructor(value: T) {
@@ -12,7 +12,7 @@ export abstract class SimpleValueObject<T> {
         return this.value;
     }
 
-    public equals(other: SimpleValueObject<T>): boolean {
+    public equals(other: ValueObject<T>): boolean {
         if (!(other instanceof this.constructor)) {
             return false;
         }

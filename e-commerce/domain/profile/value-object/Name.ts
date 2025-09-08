@@ -1,7 +1,6 @@
-import { ComplexValueObject } from "../../shared/domain/ComplexValueObject";
-import { NameProps } from "../types";
-
-export class Name extends ComplexValueObject<NameProps> {
+import {valueObject }from "../../../shared/domain/value-object/ValueObject";
+import { NameType } from "../types";
+export class Name extends ComplexValueObject<NameType> {
     private readonly firstName: string;
     private readonly middleName?: string;
     private readonly lastName: string;
@@ -10,7 +9,7 @@ export class Name extends ComplexValueObject<NameProps> {
         super({ firstName, middleName, lastName });
     }
 
-    protected validate(value: NameProps): void {
+    protected validate(value: NameType): void {
         if (!value.firstName || value.firstName.trim() === '') {
             throw new Error('First name cannot be empty');
         }
