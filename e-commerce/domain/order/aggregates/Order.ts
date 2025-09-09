@@ -1,12 +1,12 @@
-import {OrderId} from "../value-object/";
+import {OrderId, CustomerId} from "../value-object/";
 
 export class Order {
     private readonly id: OrderId;
     private readonly orderNumber: string;
     private readonly createAt: Date;
-    private readonly customerId: string;
+    private readonly customerId: CustomerId;
 
-    private  orderStatus: string;
+    private  orderStatus: boolean;
     private  subtotal: number;
     private  vatAmount: number;
     private  totalAmount: number;

@@ -7,7 +7,7 @@ export class Name extends ValueObject<NameType> {
     private readonly lastName: string;
 
     constructor(firstName: string, lastName: string, middleName?: string) {
-        super({ firstName, middleName, lastName });
+        super({firstName, middleName, lastName});
     }
 
     protected validate(value: NameType): void {
