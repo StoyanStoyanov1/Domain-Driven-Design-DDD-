@@ -1,9 +1,9 @@
-import {ProfileId, Name} from "../value-object";
+import {ProfileId, Name, Email} from "../value-object"; // Fields
 
 class Profile {
     private readonly id: ProfileId;
     private readonly name: Name;
-    private readonly email: string;
+    private readonly email: Email;
     private readonly phoneNumber: string;
     private readonly username: string;
     private readonly dateOfBirth: Date;
@@ -15,7 +15,7 @@ class Profile {
     constructor(
         id: ProfileId,
         name: Name,
-        email: string,
+        email: Email,
         phoneNumber: string,
         username: string,
         dateOfBirth: Date,

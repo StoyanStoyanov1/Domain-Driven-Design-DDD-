@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/Email.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/Name.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/Name.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +98,9 @@
       <workItem from="1757311681197" duration="1296000" />
       <workItem from="1757330639904" duration="68000" />
       <workItem from="1757344019000" duration="1177000" />
+      <workItem from="1757396921048" duration="153000" />
+      <workItem from="1757397089802" duration="2225000" />
+      <workItem from="1757399356710" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />

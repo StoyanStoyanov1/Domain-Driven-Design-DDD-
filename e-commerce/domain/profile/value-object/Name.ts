@@ -1,6 +1,6 @@
 import { ValueObject } from "../../shared/domain/ValueObject";
 import { NameType } from "../types";
-import { Result } from "../../shared/core/Result";
+import { Result } from "../../shared/core";
 export class Name extends ValueObject<NameType> {
     private readonly firstName: string;
     private readonly middleName?: string;
