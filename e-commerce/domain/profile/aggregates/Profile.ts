@@ -4,13 +4,14 @@ import { ProfileCreatedEvent, ProfileUpdatedEvent, ProfileEmailChangedEvent } fr
 
 export class Profile {
     private readonly id: ProfileId;
+    private readonly username: Username;
+    private readonly dateOfBirth: Date;
+    private readonly createdAt: Date;
+
     private name: Name;
     private email: Email;
     private phoneNumber: PhoneNumber;
-    private readonly username: Username;
-    private readonly dateOfBirth: Date;
     private address: Address;
-    private readonly createdAt: Date;
     private updatedAt: Date;
     private domainEvents: DomainEvent[] = [];
 

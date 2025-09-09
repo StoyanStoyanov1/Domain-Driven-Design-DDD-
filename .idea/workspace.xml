@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add Address value object and update Profile to use Address type">
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/events/ProfileCreatedEvent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/events/ProfileEmailChangedEvent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/events/ProfileUpdatedEvent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/events/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/shared/events/DomainEvent.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/events/ProfileCreatedEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/events/ProfileCreatedEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/PhoneNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/PhoneNumber.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <workItem from="1757344019000" duration="1177000" />
       <workItem from="1757396921048" duration="153000" />
       <workItem from="1757397089802" duration="2225000" />
-      <workItem from="1757399356710" duration="8703000" />
+      <workItem from="1757399356710" duration="9940000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -264,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757404505103</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: Add Address value object and update Profile to use Address type">
+      <option name="closed" value="true" />
+      <created>1757416964546</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1757416964546</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
