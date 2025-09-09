@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add Email value object for email validation and update Profile to use Email type">
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/PhoneNumber.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/Username.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add PhoneNumber and Username value objects, and update Profile to use them">
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/Address.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/IAddress.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/index.ts" afterDir="false" />
@@ -100,7 +100,7 @@
       <workItem from="1757344019000" duration="1177000" />
       <workItem from="1757396921048" duration="153000" />
       <workItem from="1757397089802" duration="2225000" />
-      <workItem from="1757399356710" duration="546000" />
+      <workItem from="1757399356710" duration="4801000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -246,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757399431645</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: Add PhoneNumber and Username value objects, and update Profile to use them">
+      <option name="closed" value="true" />
+      <created>1757399927307</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1757399927307</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +278,7 @@
     <MESSAGE value="Introduce `Product` entity and supporting value objects: `ProductItemId` and `OrderId`. Update `Entity` base class for export." />
     <MESSAGE value="Introduce `OrderItem` entity to replace `Product` entity, adding validation, calculation utilities, and factory methods." />
     <MESSAGE value="feat: Add Email value object for email validation and update Profile to use Email type" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Email value object for email validation and update Profile to use Email type" />
+    <MESSAGE value="feat: Add PhoneNumber and Username value objects, and update Profile to use them" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add PhoneNumber and Username value objects, and update Profile to use them" />
   </component>
 </project>

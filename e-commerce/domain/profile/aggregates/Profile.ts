@@ -1,13 +1,13 @@
-import {ProfileId, Name, Email, PhoneNumber, Username} from "../value-object"; // Fields
+import {ProfileId, Name, Email, PhoneNumber, Username, Address} from "../value-object"; // Fields
 
-class Profile {
+export class Profile {
     private readonly id: ProfileId;
     private readonly name: Name;
     private readonly email: Email;
     private readonly phoneNumber: PhoneNumber;
     private readonly username: Username;
     private readonly dateOfBirth: Date;
-    private readonly address: string;
+    private readonly address: Address;
     private readonly createdAt: Date;
 
     readonly updatedAt: Date;
@@ -19,7 +19,7 @@ class Profile {
         phoneNumber: PhoneNumber,
         username: Username,
         dateOfBirth: Date,
-        address: string,
+        address: Address,
         createdAt: Date,
         updatedAt: Date
     ) {
@@ -34,19 +34,3 @@ class Profile {
         this.updatedAt = updatedAt;
     }
 }
-
-
-// Id ( UUID ) - ready
-// First name
-// Middle Name ( Optional )
-// Last Name
-// Phone number
-// Username ( Optional )
-// Avatar
-// Date of birth
-// Gender
-// AuditLog History
-// CreateAt
-// UpdateAt
-// CreatedBy: UserId
-// UpdatedBy: UserId

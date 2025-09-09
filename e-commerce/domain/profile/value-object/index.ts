@@ -3,6 +3,7 @@ import {Name} from "./Name";
 import {Email} from "./Email";
 import {PhoneNumber} from "./PhoneNumber";
 import {Username} from "./Username";
+import {Address} from "./Address";
 
 export {
     ProfileId,
@@ -10,4 +11,5 @@ export {
     Email,
     PhoneNumber,
     Username,
+    Address,
 }
