@@ -3,6 +3,7 @@ import {CustomerId} from "./CustomerId";
 import {OrderItemId} from "./OrderItemId";
 import {ProductName} from "./ProductName";
 import {ProductPrice} from "./ProductPrice";
+import {Currency } from "./Currency";
 
 export {
     OrderId,
@@ -10,4 +11,5 @@ export {
     OrderItemId,
     ProductName,
     ProductPrice,
+    Currency
 }

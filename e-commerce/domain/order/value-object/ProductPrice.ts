@@ -5,7 +5,7 @@ export class ProductPrice extends ValueObject<number> {
     static readonly CANT_BE_NEGATIVE = 'Product price cannot be negative';
 
     constructor(value: number) {
-        super(Math.round(value * 100) / 100); // Закръгляване до 2 знака
+        super(Math.round(value * 100) / 100);
     }
 
     protected validate(value: number) {

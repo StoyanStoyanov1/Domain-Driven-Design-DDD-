@@ -1,4 +1,4 @@
-import {OrderId, CustomerId} from "../value-object/";
+import {OrderId, CustomerId, Currency} from "../value-object/";
 
 export class Order {
     private readonly id: OrderId;
@@ -10,7 +10,7 @@ export class Order {
     private  subtotal: number;
     private  vatAmount: number;
     private  totalAmount: number;
-    private  currency: string;
+    private  currency: Currency;
     private  paymentMethod: string;
     private  paymentStatus: string;
     private  notes: string;
