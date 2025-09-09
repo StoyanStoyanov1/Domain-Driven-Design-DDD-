@@ -9,7 +9,7 @@ export class OrderItemId extends ValueObject<string>{
     }
 
     protected validate(value: string) {
-        if (!value && value.trim() === '') {
+        if (!value || value.trim() === '') {
             throw new Error(OrderItemId.CANT_BE_EMPTY);
         }
     }
@@ -18,7 +18,7 @@ export class OrderItemId extends ValueObject<string>{
         return this.getValue();
     }
 
-    create(id: string): Result<OrderItemId> {
+    public static create(id: string): Result<OrderItemId> {
         try {
         const orderItemId = new OrderItemId(id);
             return Result.ok<OrderItemId>(orderItemId);

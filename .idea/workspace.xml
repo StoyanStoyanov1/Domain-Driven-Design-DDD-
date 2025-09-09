@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add Order and OrderId value objects for order management">
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/entities/OrderItem.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/CustomerId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/OrderItemId.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add CustomerId and OrderItem value objects for order management">
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/ProductName.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/ProductPrice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/aggregates/Order.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/aggregates/Order.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/entities/OrderItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/entities/OrderItem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/value-object/OrderItemId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/OrderItemId.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/value-object/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/Name.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/Name.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/ProfileId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/ProfileId.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,26 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/stenly/Desktop/DHS-PORTAL-WEB/DOMAIN-DRIVEN-DESING(DDD)&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/snap/webstorm/509/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "ToolWindow.GitHub Copilot Chat.ShowToolbar": "false",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/stenly/Desktop/DHS-PORTAL-WEB/DOMAIN-DRIVEN-DESING(DDD)",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/snap/webstorm/509/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ddd-exercises" />
@@ -104,7 +103,7 @@
       <workItem from="1757344019000" duration="1177000" />
       <workItem from="1757396921048" duration="153000" />
       <workItem from="1757397089802" duration="2225000" />
-      <workItem from="1757399356710" duration="17562000" />
+      <workItem from="1757399356710" duration="19371000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -290,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757423463041</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="feat: Add CustomerId and OrderItem value objects for order management">
+      <option name="closed" value="true" />
+      <created>1757431114596</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1757431114596</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +325,7 @@
     <MESSAGE value="feat: Add Address value object and update Profile to use Address type" />
     <MESSAGE value="feat: Refactor PhoneNumber value object for improved validation and normalization" />
     <MESSAGE value="feat: Add Order and OrderId value objects for order management" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Order and OrderId value objects for order management" />
+    <MESSAGE value="feat: Add CustomerId and OrderItem value objects for order management" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add CustomerId and OrderItem value objects for order management" />
   </component>
 </project>
