@@ -1,6 +1,6 @@
 import {ValueObject} from "../../shared/domain/ValueObject";
 
-class ProductPrice extends ValueObject<number> {
+export class ProductPrice extends ValueObject<number> {
 
     static readonly CANT_BE_NEGATIVE = 'Product price cannot be negative';
 

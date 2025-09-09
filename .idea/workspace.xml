@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add CustomerId and OrderItem value objects for order management">
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/ProductName.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/ProductPrice.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Introduce ProductName and ProductPrice value objects for order management">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/entities/OrderItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/entities/OrderItem.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/value-object/OrderItemId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/OrderItemId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/value-object/ProductPrice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/ProductPrice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/order/value-object/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +100,7 @@
       <workItem from="1757344019000" duration="1177000" />
       <workItem from="1757396921048" duration="153000" />
       <workItem from="1757397089802" duration="2225000" />
-      <workItem from="1757399356710" duration="19371000" />
+      <workItem from="1757399356710" duration="20890000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -297,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757431114596</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="feat: Introduce ProductName and ProductPrice value objects for order management">
+      <option name="closed" value="true" />
+      <created>1757432948949</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1757432948949</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +331,7 @@
     <MESSAGE value="feat: Refactor PhoneNumber value object for improved validation and normalization" />
     <MESSAGE value="feat: Add Order and OrderId value objects for order management" />
     <MESSAGE value="feat: Add CustomerId and OrderItem value objects for order management" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add CustomerId and OrderItem value objects for order management" />
+    <MESSAGE value="feat: Introduce ProductName and ProductPrice value objects for order management" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Introduce ProductName and ProductPrice value objects for order management" />
   </component>
 </project>
