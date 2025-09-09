@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add Address value object and update Profile to use Address type">
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Refactor PhoneNumber value object for improved validation and normalization">
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/aggregates/Order.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/OrderId.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/order/value-object/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/aggregates/Profile.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/events/ProfileCreatedEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/events/ProfileCreatedEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/PhoneNumber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/profile/value-object/PhoneNumber.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/shared/domain/ValueObject.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,7 @@
       <workItem from="1757344019000" duration="1177000" />
       <workItem from="1757396921048" duration="153000" />
       <workItem from="1757397089802" duration="2225000" />
-      <workItem from="1757399356710" duration="9940000" />
+      <workItem from="1757399356710" duration="11945000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -270,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757416964546</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: Refactor PhoneNumber value object for improved validation and normalization">
+      <option name="closed" value="true" />
+      <created>1757418407331</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1757418407331</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +303,7 @@
     <MESSAGE value="feat: Add Email value object for email validation and update Profile to use Email type" />
     <MESSAGE value="feat: Add PhoneNumber and Username value objects, and update Profile to use them" />
     <MESSAGE value="feat: Add Address value object and update Profile to use Address type" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Address value object and update Profile to use Address type" />
+    <MESSAGE value="feat: Refactor PhoneNumber value object for improved validation and normalization" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Refactor PhoneNumber value object for improved validation and normalization" />
   </component>
 </project>
