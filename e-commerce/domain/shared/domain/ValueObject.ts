@@ -1,9 +1,7 @@
-import {ProfileId} from "../../profile/value-object";
-
 export abstract class ValueObject<T> {
     protected value: T;
 
-    constructor(value: T) {  // T вместо Т (кирилица)
+    constructor(value: T) {  
         this.validate(value);
         this.value = value;
     }

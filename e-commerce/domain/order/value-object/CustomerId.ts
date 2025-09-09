@@ -1,7 +1,5 @@
-import {ProfileId} from "../../profile/value-object";
+import { ProfileId } from "../../profile/value-object";
 
 export class CustomerId extends ProfileId {
-    constructor(profileId: ProfileId) {
-        super(profileId);
-    }
+
 }

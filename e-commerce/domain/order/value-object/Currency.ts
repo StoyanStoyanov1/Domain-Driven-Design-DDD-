@@ -1,6 +1,5 @@
 import {ValueObject} from "../../shared/domain/ValueObject";
-import {CurrencyType} from "../types";
-
+import {currencyChoices} from "../enums/";
 export class Currency extends ValueObject<string>{
     constructor(value: string) {
         const normalizedValue = value.trim().toUpperCase();
@@ -12,7 +11,7 @@ export class Currency extends ValueObject<string>{
             throw new Error('Currency is required');
         }
 
-        if (!(value in CurrencyType)) {
+        if (!(value in currencyChoices)) {
             throw new Error('Invalid currency');
         }
     }
