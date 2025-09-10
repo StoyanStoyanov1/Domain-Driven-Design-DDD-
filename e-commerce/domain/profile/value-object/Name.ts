@@ -7,7 +7,7 @@ export class Name extends ValueObject<NameType> {
     private readonly lastName: string;
 
     constructor(firstName: string, lastName: string, middleName?: string) {
-        super({firstName, middleName, lastName});
+        super({ firstName, middleName, lastName });
     }
 
     protected validate(value: NameType): void {
@@ -19,7 +19,7 @@ export class Name extends ValueObject<NameType> {
         }
     }
 
-      public static create(obj: NameType): Result<Name> {
+    static create(obj: NameType): Result<Name> {
         try {
             return Result.ok<Name>(new Name(obj.firstName, obj.lastName, obj.middleName));
         } catch (error) {

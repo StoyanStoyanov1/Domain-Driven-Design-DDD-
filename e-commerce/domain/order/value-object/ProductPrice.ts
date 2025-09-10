@@ -1,3 +1,4 @@
+import { Result } from "../../shared/core";
 import {ValueObject} from "../../shared/domain/ValueObject";
 
 export class ProductPrice extends ValueObject<number> {
@@ -20,5 +21,13 @@ export class ProductPrice extends ValueObject<number> {
 
     toString(): string {
         return this.getFormatted();
+    }
+
+    static create(value: number): Result<ProductPrice> {
+        try {
+            return Result.ok(new ProductPrice(value));
+        } catch (error) {
+            return Result.fail<ProductPrice>(error.message);
+        }   
     }
 }

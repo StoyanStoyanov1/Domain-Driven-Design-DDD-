@@ -1,3 +1,4 @@
+import { Result } from "../../shared/core";
 import { ValueObject } from "../../shared/domain/ValueObject";
 import { paymentMethodChoices } from "../enums";
 
@@ -19,4 +20,11 @@ export class PaymentMethod extends ValueObject<string> {
         }
     }
 
+    static create(value: string): Result<PaymentMethod> {
+        try {
+            return Result.ok(new PaymentMethod(value));
+        } catch (error) {
+            return Result.fail<PaymentMethod>(error.message);
+        }
+    }
 }

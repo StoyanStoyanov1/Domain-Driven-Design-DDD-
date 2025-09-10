@@ -29,7 +29,7 @@ export class OrderItem {
 
     private calculateTotalPrice(): ProductPrice {
         const total = this.productPrice.getValue() * this.quantity;
-        return new ProductPrice(total);
+        return ProductPrice.create(total).getValue();
     }
 
     private validate (quantity: number): void {
@@ -69,5 +69,23 @@ export class OrderItem {
 
     getProductPrice(): ProductPrice {
         return this.productPrice;
+    }
+
+    static create(
+        orderItemId: OrderItemId,
+        orderId: OrderId,
+        productName: ProductName,
+        sku: string,
+        productPrice: ProductPrice,
+        quantity: number
+    ): OrderItem {
+        return new OrderItem(
+            orderItemId,
+            orderId,
+            productName,
+            sku,
+            productPrice,
+            quantity
+        );
     }
 }

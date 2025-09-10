@@ -1,3 +1,4 @@
+import { Result } from "../../shared/core";
 import {ValueObject} from "../../shared/domain/ValueObject";
 import {IAddress} from "./IAddress";
 
@@ -46,5 +47,13 @@ export class Address extends ValueObject<IAddress> {
         if (this.value.apartment) parts.push(`Apt ${this.value.apartment}`);
         parts.push(this.value.city, this.value.region, this.value.postCode, this.value.country);
         return parts.join(', ');
+    }
+
+    static create(address: IAddress): Result<Address> {
+        try {
+            return Result.ok(new Address(address));
+        } catch (error) {
+            return Result.fail<Address>(error.message);
+        }
     }
 }

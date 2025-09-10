@@ -1,7 +1,7 @@
+import { Result } from "../../shared/core";
 import {ValueObject} from "../../shared/domain/ValueObject";
 
 export class Email extends ValueObject<string>{
-    private readonly value: string;
 
     static readonly ERROR_MESSAGE_VALUE_IS_EMPTY = 'Email cannot be empty';
     static readonly ERROR_MESSAGE_VALUE_IS_TOO_LONG = 'Email is too long';
@@ -10,8 +10,6 @@ export class Email extends ValueObject<string>{
 
     constructor(props: string) {
         super(props);
-        this.validate(props);
-        this.value = props;
     }
 
     public getValue(): string {
@@ -34,6 +32,14 @@ export class Email extends ValueObject<string>{
 
         if (value.includes('..')) {
             throw new Error(Email.ERROR_MESSAGE_VALUE_IS_CONSECUTIVE_DOTS);
+        }
+    }
+
+    static create(email: string): Result<Email> {
+        try {
+            return Result.ok(new Email(email));
+        } catch (error) {
+            return Result.fail<Email>(error.message);
         }
     }
 }

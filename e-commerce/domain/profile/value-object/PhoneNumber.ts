@@ -1,9 +1,9 @@
+import { Result } from '../../shared/core';
 import { ValueObject } from '../../shared/domain/ValueObject';
 
 export class PhoneNumber extends ValueObject<string> {
     constructor(value: string) {
         super(value);
-        this.validate(value);
     }
 
     public getValue(): string {
@@ -24,5 +24,13 @@ export class PhoneNumber extends ValueObject<string> {
         }
 
         this.value = normalized;
+    }
+
+    static create(phoneNumber: string): Result<PhoneNumber> {
+        try {
+            return Result.ok(new PhoneNumber(phoneNumber));
+        } catch (error) {
+            return Result.fail<PhoneNumber>(error.message);
+        }
     }
 }
