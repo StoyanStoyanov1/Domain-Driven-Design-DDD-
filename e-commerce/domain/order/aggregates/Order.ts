@@ -1,6 +1,4 @@
-import { OrderId, CustomerId, Currency } from "../value-object/";
-import { PaymentStatus } from "../value-object/PaymentStatus";
-import { PaymentMethod } from "../value-object/PaymentMethod";
+import { OrderId, CustomerId, Currency, PaymentMethod, PaymentStatus, OrderStatus} from "../value-object/";
 
 export class Order {
     private readonly id: OrderId;
@@ -8,7 +6,7 @@ export class Order {
     private readonly createdAt: Date;
     private readonly customerId: CustomerId;
 
-    private orderStatus: "OPEN" | "CONFIRMED" | "CANCELLED";
+    private orderStatus: OrderStatus;
     private subtotal: number;
     private vatAmount: number;
     private totalAmount: number;
@@ -34,7 +32,7 @@ export class Order {
         this.subtotal = 0;
         this.vatAmount = 0;
         this.totalAmount = 0;
-        this.orderStatus = "OPEN";
+        this.orderStatus = OrderStatus.open();;
         this.paymentStatus = PaymentStatus.pending();
     }
 
@@ -52,14 +50,14 @@ export class Order {
             throw new Error("Payment already processed");
         }
         this.paymentStatus = PaymentStatus.paid();
-        this.orderStatus = "CONFIRMED";
+        this.orderStatus = OrderStatus.confirmed();
     }
 
     cancel(): void {
-        if (this.orderStatus === "CONFIRMED") {
+        if (this.orderStatus === OrderStatus.confirmed()) {
             throw new Error("Cannot cancel a confirmed order");
         }
-        this.orderStatus = "CANCELLED";
+        this.orderStatus = OrderStatus.cancelled();
     }
 
     addNote(note: string): void {
