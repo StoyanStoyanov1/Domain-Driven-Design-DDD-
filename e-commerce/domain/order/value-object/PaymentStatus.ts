@@ -22,10 +22,18 @@ export class PaymentStatus extends ValueObject<string> {
 
     static create(value: string): Result<PaymentStatus> {
         try {
-            return Result.ok(new PaymentStatus(value));
+            return Result.ok<PaymentStatus>(new PaymentStatus(value));
         } catch (error) {
             return Result.fail<PaymentStatus>(error.message);
         }
     }
+
+    // Factory methods for each payment status
+
+    static pending()   { return new PaymentStatus(paymentStatusChoices.PENDING); }
+    static paid()      { return new PaymentStatus(paymentStatusChoices.PAID); }
+    static failed()    { return new PaymentStatus(paymentStatusChoices.FAILED); }
+    static cancelled() { return new PaymentStatus(paymentStatusChoices.CANCELLED); }
+    static refunded()  { return new PaymentStatus(paymentStatusChoices.REFUNDED); }
 
 }
