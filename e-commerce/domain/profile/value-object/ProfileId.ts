@@ -4,7 +4,7 @@ import { Result } from "../../shared/core/Result";
 export class ProfileId extends ValueObject<string> {
     static readonly ERROR_MESSAGE_VALUE_IS_EMPTY = 'Id cannot be empty';
 
-    constructor(id: ProfileId) {
+    constructor(id: string) {
         super(id);
     }
 
