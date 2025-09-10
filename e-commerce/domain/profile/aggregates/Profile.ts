@@ -1,9 +1,10 @@
+import { Entity } from "../../shared/domain/Entity"; // ⬅️ ДОБАВЯМЕ Entity import
 import { ProfileId, Name, Email, PhoneNumber, Username, Address } from "../value-object";
 import { DomainEvent } from "../../shared/events/DomainEvent";
 import { ProfileCreatedEvent, ProfileUpdatedEvent, ProfileEmailChangedEvent } from "../events/";
 
-export class Profile {
-    private readonly id: ProfileId;
+export class Profile extends Entity { 
+    private readonly profileId: ProfileId; 
     private readonly username: Username;
     private readonly dateOfBirth: Date;
     private readonly createdAt: Date;
@@ -16,7 +17,7 @@ export class Profile {
     private domainEvents: DomainEvent[] = [];
 
     constructor(
-        id: ProfileId,
+        profileId: ProfileId, // 
         name: Name,
         email: Email,
         phoneNumber: PhoneNumber,
@@ -26,7 +27,8 @@ export class Profile {
         createdAt: Date,
         updatedAt: Date
     ) {
-        this.id = id;
+        super(profileId.getValue()); 
+        this.profileId = profileId; 
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -38,7 +40,7 @@ export class Profile {
     }
 
     public static create(
-        id: ProfileId,
+        profileId: ProfileId, // ⬅️ ProfileId за Profile entity
         name: Name,
         email: Email,
         phoneNumber: PhoneNumber,
@@ -48,7 +50,7 @@ export class Profile {
     ): Profile {
         const now = new Date();
         const profile = new Profile(
-            id,
+            profileId, // ⬅️ Profile ID
             name,
             email,
             phoneNumber,
@@ -59,7 +61,7 @@ export class Profile {
             now
         );
 
-        profile.addDomainEvent(new ProfileCreatedEvent(id, email, name));
+        profile.addDomainEvent(new ProfileCreatedEvent(profileId, email, name));
         return profile;
     }
 
@@ -69,7 +71,7 @@ export class Profile {
         this.address = address;
         this.updatedAt = new Date();
 
-        this.addDomainEvent(new ProfileUpdatedEvent(this.id));
+        this.addDomainEvent(new ProfileUpdatedEvent(this.profileId)); // ⬅️ Profile ID
     }
 
     changeEmail(newEmail: Email): void {
@@ -77,44 +79,23 @@ export class Profile {
 
         this.email = newEmail;
         this.updatedAt = new Date();
-        this.addDomainEvent(new ProfileEmailChangedEvent(this.id, newEmail));
+        this.addDomainEvent(new ProfileEmailChangedEvent(this.profileId, newEmail)); // ⬅️ Profile ID
     }
 
-    getId(): ProfileId {
-        return this.id;
+    // ⬅️ Getter връща Profile ID
+    getProfileId(): ProfileId {
+        return this.profileId;
     }
 
-    getName(): Name {
-        return this.name;
-    }
-
-    getEmail(): Email {
-        return this.email;
-    }
-
-    getPhoneNumber(): PhoneNumber {
-        return this.phoneNumber;
-    }
-
-    getUsername(): Username {
-        return this.username;
-    }
-
-    getDateOfBirth(): Date {
-        return this.dateOfBirth;
-    }
-
-    getAddress(): Address {
-        return this.address;
-    }
-
-    getCreatedAt(): Date {
-        return this.createdAt;
-    }
-
-    getUpdatedAt(): Date {
-        return this.updatedAt;
-    }
+    // Останалите getters...
+    getName(): Name { return this.name; }
+    getEmail(): Email { return this.email; }
+    getPhoneNumber(): PhoneNumber { return this.phoneNumber; }
+    getUsername(): Username { return this.username; }
+    getDateOfBirth(): Date { return this.dateOfBirth; }
+    getAddress(): Address { return this.address; }
+    getCreatedAt(): Date { return this.createdAt; }
+    getUpdatedAt(): Date { return this.updatedAt; }
 
     private addDomainEvent(event: DomainEvent): void {
         this.domainEvents.push(event);
