@@ -1,5 +1,6 @@
 import {Entity} from "../../shared/domain/Entity";
 import {ProductId, Sku, ProductName, Description, Price, Status} from "../value-object";
+import {Result} from "../../shared/core";
 
 export class Product extends Entity{
     private readonly productId: ProductId;
@@ -33,10 +34,40 @@ export class Product extends Entity{
     get name(): string { return this.productName.getValue(); }
     get shortDescription(): string {return this.description.toPrimitives().short;}
     get fullDescription(): string {return this.description.toPrimitives().full;}
+    get priceValue(): number { return this.price.getValue(); }
+    get createdAtValue(): Date { return this.createdAt; }
+    get statusValue(): Status { return this.status; }
 
     // VO
     getProductId(): ProductId { return this.productId; }
     getSku(): Sku { return this.sku; }
     getProductName(): ProductName { return this.productName; }
     getDescription(): Description { return this.description; }
+    getPrice(): Price { return this.price; }
+    getCreatedAt(): Date { return this.createdAt; }
+    getStatus(): Status { return this.status; }
+
+    static create(
+        productId: ProductId,
+        sku: Sku,
+        productName: ProductName,
+        description: Description,
+        price: Price,
+        status: Status,
+    ): Result<Product> {
+        try {
+            const product = new Product(
+                productId,
+                sku,
+                productName,
+                description,
+                price,
+                status,
+            );
+            return Result.ok<Product>(product);
+        } catch (error) {
+            return Result.fail<Product>(error.message);
+        }
+    }
+
 }
