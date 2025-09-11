@@ -4,6 +4,8 @@ import {ProductName} from "../../order/value-object";
 import {Description} from "./Description";
 import {ShortDescription} from "./ShortDescription";
 import {FullDescription} from "./FullDescription";
+import {Price} from "./Price";
+import {Status} from "./Status";
 
 export {
     ProductId,
@@ -12,4 +14,6 @@ export {
     ShortDescription,
     FullDescription,
     Description,
+    Price,
+    Status,
 }

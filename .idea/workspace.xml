@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add ProductName value object and integrate it into Product class for enhanced product management">
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/types/descriptionProps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/Description.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/FullDescription.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ShortDescription.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add Description, ShortDescription, and FullDescription value objects for enhanced product description management">
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/types/PriceChangeChoices.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/types/StatusChoices.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/Price.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/Status.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/aggregate/Product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/aggregate/Product.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductId.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductName.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductName.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/value-object/Sku.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/Sku.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/types/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/value-object/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +109,7 @@
       <workItem from="1757450687412" duration="4000" />
       <workItem from="1757482546783" duration="7000" />
       <workItem from="1757574601150" duration="1457000" />
-      <workItem from="1757576119594" duration="5186000" />
+      <workItem from="1757576119594" duration="10744000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -338,14 +335,32 @@
       <option name="project" value="LOCAL" />
       <updated>1757578168065</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="feat: Add Description, ShortDescription, and FullDescription value objects for enhanced product description management">
+      <option name="closed" value="true" />
+      <created>1757592377171</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1757592377171</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Introduce `EntityId` value object and `EntityIdType` for ID validation in core domain." />
     <MESSAGE value="Introduce `PhoneNumber` value object and `PhoneNumberType` for phone number validation in core domain." />
     <MESSAGE value="Enhance `PhoneNumber` value object with country code support and dial code validation." />
     <MESSAGE value="Introduce `Money` value object and utilities for currency and amount validation in core domain." />
@@ -370,6 +385,7 @@
     <MESSAGE value="feat: Add ProductPrice value object and integrate it into OrderItem for price calculations" />
     <MESSAGE value="feat: Add Product, ProductId, and Sku value objects for product management" />
     <MESSAGE value="feat: Add ProductName value object and integrate it into Product class for enhanced product management" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add ProductName value object and integrate it into Product class for enhanced product management" />
+    <MESSAGE value="feat: Add Description, ShortDescription, and FullDescription value objects for enhanced product description management" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Description, ShortDescription, and FullDescription value objects for enhanced product description management" />
   </component>
 </project>
