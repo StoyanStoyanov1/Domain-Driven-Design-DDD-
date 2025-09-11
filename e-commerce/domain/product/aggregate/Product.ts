@@ -1,6 +1,7 @@
 import {Entity} from "../../shared/domain/Entity";
 import {ProductId, Sku, ProductName, Description, Price, Status} from "../value-object";
 import {Result} from "../../shared/core";
+import {StatusChoices} from "../types";
 
 export class Product extends Entity{
     private readonly productId: ProductId;
@@ -17,7 +18,6 @@ export class Product extends Entity{
         productName: ProductName,
         description: Description,
         price: Price,
-        status: Status,
     ) {
         super(productId.getValue());
         this.sku = sku;
@@ -25,7 +25,7 @@ export class Product extends Entity{
         this.description = description;
         this.createdAt = new Date();
         this.price = price;
-        this.status = status;
+        this.status = StatusChoices.ACTIVE as Status;
     }
 
     // Getters
@@ -53,7 +53,6 @@ export class Product extends Entity{
         productName: ProductName,
         description: Description,
         price: Price,
-        status: Status,
     ): Result<Product> {
         try {
             const product = new Product(
@@ -62,7 +61,6 @@ export class Product extends Entity{
                 productName,
                 description,
                 price,
-                status,
             );
             return Result.ok<Product>(product);
         } catch (error) {
