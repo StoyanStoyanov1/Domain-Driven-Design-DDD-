@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add ProductPrice value object and integrate it into OrderItem for price calculations">
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/aggregate/Product.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/Sku.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/index.ts" afterDir="false" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add Product, ProductId, and Sku value objects for product management">
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductName.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e-commerce/domain/cart/aggregate/Cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/cart/aggregate/Cart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/aggregate/Product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/aggregate/Product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/product/value-object/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +105,8 @@
       <workItem from="1757440850952" duration="616000" />
       <workItem from="1757450687412" duration="4000" />
       <workItem from="1757482546783" duration="7000" />
-      <workItem from="1757574601150" duration="1323000" />
+      <workItem from="1757574601150" duration="1457000" />
+      <workItem from="1757576119594" duration="2023000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
@@ -316,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757436887220</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="feat: Add Product, ProductId, and Sku value objects for product management">
+      <option name="closed" value="true" />
+      <created>1757575957294</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1757575957294</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +355,7 @@
     <MESSAGE value="feat: Add CustomerId and OrderItem value objects for order management" />
     <MESSAGE value="feat: Introduce ProductName and ProductPrice value objects for order management" />
     <MESSAGE value="feat: Add ProductPrice value object and integrate it into OrderItem for price calculations" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add ProductPrice value object and integrate it into OrderItem for price calculations" />
+    <MESSAGE value="feat: Add Product, ProductId, and Sku value objects for product management" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Product, ProductId, and Sku value objects for product management" />
   </component>
 </project>
