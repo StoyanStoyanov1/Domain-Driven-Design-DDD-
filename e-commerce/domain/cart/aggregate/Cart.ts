@@ -7,7 +7,7 @@ export class Cart extends Entity {
     private items: CartItem[] = [];
     private readonly customerId: CustomerId;
     // SessionId
-    private readonly createdAt: Date;;
+    private readonly createdAt: Date;
     private updatedAt: Date;
     private status: CartStatus;
     //IP address

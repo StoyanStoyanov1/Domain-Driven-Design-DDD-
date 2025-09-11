@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Add ProductPrice value object and integrate it into OrderItem for price calculations">
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/aggregate/Product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/ProductId.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/Sku.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e-commerce/domain/product/value-object/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/cart/aggregate/Cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/cart/aggregate/Cart.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +106,7 @@
       <workItem from="1757440850952" duration="616000" />
       <workItem from="1757450687412" duration="4000" />
       <workItem from="1757482546783" duration="7000" />
+      <workItem from="1757574601150" duration="1323000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />
