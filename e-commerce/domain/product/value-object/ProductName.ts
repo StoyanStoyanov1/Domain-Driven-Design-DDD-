@@ -27,7 +27,7 @@ class ProductName extends ValueObject<string>{
         }
     }
 
-    create(value: string): Result<ProductName> {
+    static create(value: string): Result<ProductName> {
         try {
             const productName = new ProductName(value);
             return Result.ok<ProductName>(productName);

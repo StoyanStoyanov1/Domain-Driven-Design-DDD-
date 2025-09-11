@@ -14,7 +14,7 @@ export class Sku extends ValueObject<string> {
         }
     }
 
-    create(value: string): Result<Sku> {
+    static create(value: string): Result<Sku> {
         try {
             const sku = new Sku(value);
             return Result.ok<Sku>(sku);

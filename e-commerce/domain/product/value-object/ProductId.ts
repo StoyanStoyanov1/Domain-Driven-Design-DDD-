@@ -15,7 +15,7 @@ export class ProductId extends ValueObject<string>{
         }
     }
 
-    create(id: string): Result<ProductId> {
+    static create(id: string): Result<ProductId> {
         try {
             const productId = new ProductId(id);
             return Result.ok<ProductId>(productId);
