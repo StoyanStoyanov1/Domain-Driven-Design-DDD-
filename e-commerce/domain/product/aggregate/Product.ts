@@ -8,7 +8,6 @@ export class Product extends Entity{
     private readonly sku: Sku;
     private readonly createdAt: Date;
     
-    private static updatedAt: Date;
     private productName: ProductName;
     private description: Description;
     private price: Price;
