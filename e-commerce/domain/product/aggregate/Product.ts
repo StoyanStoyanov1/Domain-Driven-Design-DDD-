@@ -1,5 +1,6 @@
 import {Entity} from "../../shared/domain/Entity";
 import {ProductId, Sku, ProductName, Description, Price, Status} from "../value-object";
+import {ProductCreateEvent} from "../events/";
 import {Result} from "../../shared/core";
 import {StatusChoices} from "../types";
 
@@ -48,5 +49,18 @@ export class Product extends Entity{
     getPrice(): Price { return this.price; }
     getCreatedAt(): Date { return this.createdAt; }
     getStatus(): Status { return this.status; }
+
+    public createEvent(): ProductCreateEvent {
+        return new ProductCreateEvent(
+            this.productId.getValue(),
+            this.sku.getValue(),
+            this.productName.getValue(),
+            this.description.toPrimitives().short,
+            this.description.toPrimitives().full,
+            this.price.getValue(),
+            this.status.getValue(),
+            this.createdAt
+        );
+    }
 
 }

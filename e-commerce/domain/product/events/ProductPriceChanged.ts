@@ -1,17 +1,28 @@
 import { DomainEvent } from "../../shared/events/DomainEvent";
 
 export class ProductPriceChanged extends DomainEvent {
+    static EVENT_NAME = 'ProductPriceChanged';
+
+    public readonly productId: string;
+    public readonly oldPrice: number;
+    public readonly newPrice: number;
+    public readonly reason?: string;
+
     constructor(
-        public readonly productId: string,
-        public readonly oldPrice: number,
-        public readonly newPrice: number,
-        public readonly reason?: string
+        productId: string,
+        oldPrice: number,
+        newPrice: number,
+        reason?: string
     ) {
         super();
+        this.productId = productId;
+        this.oldPrice = oldPrice;
+        this.newPrice = newPrice;
+        this.reason = reason;
     }
 
     getEventName(): string {
-        return "ProductPriceChanged";
+        return ProductPriceChanged.EVENT_NAME;
     }
 
     getAggregateId(): string {
