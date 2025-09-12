@@ -1,3 +1,5 @@
+
+
 export abstract class DomainEvent {
     public readonly eventId: string;
     public readonly occurredOn: Date;

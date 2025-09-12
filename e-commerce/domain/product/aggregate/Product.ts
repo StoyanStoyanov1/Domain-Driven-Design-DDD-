@@ -50,6 +50,24 @@ export class Product extends Entity{
     getCreatedAt(): Date { return this.createdAt; }
     getStatus(): Status { return this.status; }
 
+     public static create(
+        sku: string,
+        name: string,
+        shortDescription: string,
+        fullDescription: string,
+        price: number,
+        status: string
+    ): Product {
+        return new Product(
+            ProductId.create().getValue(),
+            Sku.create(sku).getValue(),
+            ProductName.create(name).getValue(),
+            Description.create(shortDescription, fullDescription).getValue(),
+            Price.create(price).getValue(),
+            Status.create(StatusChoices.ACTIVE).getValue()
+        );
+    }
+
     public createEvent(): ProductCreateEvent {
         return new ProductCreateEvent(
             this.productId.getValue(),

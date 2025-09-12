@@ -1,13 +1,8 @@
 import { ValueObject } from "../../shared/domain/ValueObject";
 import {Result} from "../../shared/core";
-import {ProductPrice} from "../../order/value-object";
-
+import {generateId} from "../../shared/utils";
 export class ProductId extends ValueObject<string>{
     static readonly CANT_BE_EMPTY = 'ProductId cannot be empty';
-
-    constructor(id: string) {
-        super(id);
-    }
 
     protected validate(value: string): void {
         if (!value || value.trim() === '') {
@@ -15,9 +10,9 @@ export class ProductId extends ValueObject<string>{
         }
     }
 
-    static create(id: string): Result<ProductId> {
+    static create(): Result<ProductId> {
         try {
-            const productId = new ProductId(id);
+            const productId = new ProductId(generateId());
             return Result.ok<ProductId>(productId);
         } catch (error) {
             return Result.fail<ProductId>(error.message);
