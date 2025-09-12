@@ -1,10 +1,9 @@
-import {Entity} from "../../shared/domain/Entity";
+import { AggregateRoot } from "../../shared/domain/AggregateRoot";
 import {ProductId, Sku, ProductName, Description, Price, Status} from "../value-object";
 import {ProductCreateEvent} from "../events/";
-import {Result} from "../../shared/core";
 import {StatusChoices} from "../types";
 
-export class Product extends Entity{
+export class Product extends AggregateRoot{
     private readonly productId: ProductId;
     private readonly sku: Sku;
     private readonly createdAt: Date;
@@ -58,7 +57,7 @@ export class Product extends Entity{
         price: number,
         status: string
     ): Product {
-        return new Product(
+        const product = new Product(
             ProductId.create().getValue(),
             Sku.create(sku).getValue(),
             ProductName.create(name).getValue(),
@@ -66,6 +65,9 @@ export class Product extends Entity{
             Price.create(price).getValue(),
             Status.create(StatusChoices.ACTIVE).getValue()
         );
+        product.addDomainEvent(product.createEvent());
+        return product;
+        
     }
 
     public createEvent(): ProductCreateEvent {
