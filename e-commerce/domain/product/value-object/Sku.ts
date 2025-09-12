@@ -4,10 +4,6 @@ import {Result} from "../../shared/core";
 export class Sku extends ValueObject<string> {
     static readonly CANT_BE_EMPTY = 'SKU cannot be empty';
 
-    constructor(value: string) {
-        super(value);
-    }
-
     protected validate(value: string): void {
         if (!value || value.trim() === '') {
             throw new Error(Sku.CANT_BE_EMPTY);

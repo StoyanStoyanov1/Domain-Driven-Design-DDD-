@@ -19,7 +19,7 @@ export class Description extends ValueObject<DescriptionProps> {
     }
 
     get short(): ShortDescription { return this.getValue().short; }
-    get full(): ShortDescription { return this.getValue().full; }
+    get full(): FullDescription { return this.getValue().full; }
 
     toPrimitives() {
         return {

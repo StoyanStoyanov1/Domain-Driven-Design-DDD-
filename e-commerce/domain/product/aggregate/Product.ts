@@ -6,11 +6,13 @@ import {StatusChoices} from "../types";
 export class Product extends Entity{
     private readonly productId: ProductId;
     private readonly sku: Sku;
-    private readonly productName: ProductName;
-    private readonly description: Description;
-    private readonly price: Price;
     private readonly createdAt: Date;
-    private readonly status: Status;
+    
+    private static updatedAt: Date;
+    private productName: ProductName;
+    private description: Description;
+    private price: Price;
+    private status: Status;
 
     constructor(
         productId: ProductId,
@@ -18,18 +20,19 @@ export class Product extends Entity{
         productName: ProductName,
         description: Description,
         price: Price,
+        status: Status,
     ) {
         super(productId.getValue());
+        this.productId = productId;
         this.sku = sku;
         this.productName = productName;
         this.description = description;
         this.createdAt = new Date();
         this.price = price;
-        this.status = StatusChoices.ACTIVE as Status;
+        this.status = status;
     }
 
     // Getters
-    get id(): string { return this.productId.getValue(); }
     get skuValue(): string { return this.sku.getValue(); }
     get name(): string { return this.productName.getValue(); }
     get shortDescription(): string {return this.description.toPrimitives().short;}
@@ -46,26 +49,5 @@ export class Product extends Entity{
     getPrice(): Price { return this.price; }
     getCreatedAt(): Date { return this.createdAt; }
     getStatus(): Status { return this.status; }
-
-    static create(
-        productId: ProductId,
-        sku: Sku,
-        productName: ProductName,
-        description: Description,
-        price: Price,
-    ): Result<Product> {
-        try {
-            const product = new Product(
-                productId,
-                sku,
-                productName,
-                description,
-                price,
-            );
-            return Result.ok<Product>(product);
-        } catch (error) {
-            return Result.fail<Product>(error.message);
-        }
-    }
 
 }

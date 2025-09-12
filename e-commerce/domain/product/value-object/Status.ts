@@ -6,10 +6,6 @@ export class Status extends ValueObject<StatusChoices> {
     static readonly CANT_BE_EMPTY = 'Status cannot be empty';
     static readonly INVALID_STATUS = 'Invalid status';
 
-    constructor(value: StatusChoices) {
-        super(value);
-    }
-
     protected validate(value: StatusChoices): void {
         if (!value) {
             throw new Error(Status.CANT_BE_EMPTY);

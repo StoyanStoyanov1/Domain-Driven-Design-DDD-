@@ -9,10 +9,6 @@ export class ShortDescription extends ValueObject<string>{
     static readonly MIN_LENGTH_ERROR = `Short description must be at least ${ShortDescription.MIN_LENGTH} characters long`;
     static readonly MAX_LENGTH_ERROR = `Short description must be at most ${ShortDescription.MAX_LENGTH} characters long`;
 
-    constructor(value:string) {
-        super(value);
-    }
-
     protected validate(value: string): void {
         if (!value) {
             throw new Error(ShortDescription.CANT_BE_EMPTY_ERROR);

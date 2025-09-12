@@ -9,10 +9,6 @@ export class FullDescription extends ValueObject<string>{
     static readonly MIN_LENGTH_ERROR = `Full description must be at least ${FullDescription.MIN_LENGTH} characters long`;
     static readonly MAX_LENGTH_ERROR = `Full description must be at most ${FullDescription.MAX_LENGTH} characters long`;
 
-    constructor(value: string) {
-        super(value);
-    }
-
     protected validate(value: string): void {
         if (!value) {
             throw new Error(FullDescription.CANT_BE_EMPTY_ERROR);
