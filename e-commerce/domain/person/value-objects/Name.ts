@@ -1,3 +1,4 @@
+import { Result } from "../../shared/core";
 import { ValueObject } from "../../shared/domain/ValueObject";
 
 export class Name extends ValueObject<string> {
@@ -24,9 +25,13 @@ export class Name extends ValueObject<string> {
         }
     }
 
-    static create(value: string): Name {
-        const capitalizedValue = value.trim().charAt(0).toUpperCase() + value.slice(1).toLowerCase();
-        return new Name(capitalizedValue);
+    static create(value: string): Result<Name> {
+        try {
+            const capitalizedValue = value.trim().charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+            return Result.ok(new Name(capitalizedValue));
+        } catch (error) {
+            return Result.fail(error.message);
+        }
     }
 
 }

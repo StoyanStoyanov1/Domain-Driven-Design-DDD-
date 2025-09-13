@@ -1,8 +1,8 @@
 import { AggregateRoot } from "../../shared/domain/AggregateRoot";
-import { Name } from "../value-objects";
+import { Name, ProfileId} from "../value-objects";
 
 export class Profile extends AggregateRoot {
-    private readonly profileId: string;
+    private readonly profileId: ProfileId;
     private readonly firstName: Name;
     private readonly lastName: Name;
     private readonly dateOfBirth: Date;
@@ -14,22 +14,24 @@ export class Profile extends AggregateRoot {
     private avatar?: string;
 
     constructor(
-        firstName: string,
-        lastName: string,
+        profileId: ProfileId,
+        firstName: Name,
+        lastName: Name,
         dateOfBirth: Date,
         gender: string,
-        middleName?: string,
+        middleName?: Name,
         username?: string,
         phoneNumber?: string,
         avatar?: string
     ) {
-        super('profileId');
-        this.firstName = Name.create(firstName);
-        this.lastName = Name.create(lastName);
+        super(profileId.getValue());
+        this.profileId = profileId;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.gender = gender;
-        
-        this.middleName =  middleName ?  Name.create(middleName) : undefined;
+
+        this.middleName = middleName;
         this.username = username;
         this.phoneNumber = phoneNumber;
         this.avatar = avatar;
