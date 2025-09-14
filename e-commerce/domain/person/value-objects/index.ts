@@ -5,6 +5,10 @@ import { Username } from "./Username";
 import { PhoneNumber } from "./PhoneNumber";
 import { DateOfBirth } from "./DateOfBirth";
 import { Avatar } from "./Avatar";
+import { AddressId } from "./AddressId";
+import { AddressType } from "./AddressType";
+import { Country } from "./Country";
+import { City } from "./City";
 
 export { 
     Name,
@@ -14,4 +18,8 @@ export {
     Username,
     PhoneNumber,
     Avatar,
+    Country,
+    AddressId,
+    AddressType,
+    City,
 };

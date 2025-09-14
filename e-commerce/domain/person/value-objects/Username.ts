@@ -1,5 +1,6 @@
 import { ValueObject } from "../../shared/domain/ValueObject";
 import { Result } from "../../shared/core";
+import { validateUtils } from "../../shared/utils/";
 
 export class Username extends ValueObject<string> {
     static readonly MIN_LENGTH = 3;
@@ -16,8 +17,7 @@ export class Username extends ValueObject<string> {
             throw new Error(Username.INVALID_LENGTH);
         }
 
-        const isValid = /^[a-z0-9._]+$/.test(value);
-        if (!isValid) {
+        if (!validateUtils.isValidUsername(value)) {
             throw new Error(Username.INVALID_CHARACTERS);
         }
     }

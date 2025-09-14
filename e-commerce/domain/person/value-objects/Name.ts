@@ -1,5 +1,6 @@
 import { Result } from "../../shared/core";
 import { ValueObject } from "../../shared/domain/ValueObject";
+import { validateUtils } from "../../shared/utils/";
 
 export class Name extends ValueObject<string> {
     static readonly MIN_LENGTH = 2;
@@ -19,8 +20,7 @@ export class Name extends ValueObject<string> {
             throw new Error(Name.EMPTY_NAME_ERROR);
         }
 
-        const isOnlyLetters = /^[A-Za-z]+$/.test(value);
-        if (!isOnlyLetters) {
+        if (!validateUtils.isOnlyLetters(value)) {
             throw new Error(Name.INVALID_CHARACTERS_ERROR);
         }
     }

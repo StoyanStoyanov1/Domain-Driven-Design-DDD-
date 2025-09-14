@@ -1,5 +1,6 @@
 import { ValueObject } from "../../shared/domain/ValueObject";
 import { Result } from "../../shared/core/Result";
+import { validateUtils } from "../../shared/utils/";
 
 export class PhoneNumber extends ValueObject<string> {
     static readonly CANT_BE_EMPTY = 'Phone number cannot be empty';
@@ -9,7 +10,7 @@ export class PhoneNumber extends ValueObject<string> {
         if (!value || value.trim() === '') {
             throw new Error(PhoneNumber.CANT_BE_EMPTY);
         }
-        if (!/^\+\d{1,3}\d{9,12}$/.test(value)) {
+        if (!validateUtils.isValidPhoneNumber(value)) {
             throw new Error(PhoneNumber.INVALID_FORMAT);
         }
     }
