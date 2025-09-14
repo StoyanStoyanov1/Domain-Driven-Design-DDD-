@@ -1,14 +1,14 @@
 import { AggregateRoot } from "../../shared/domain/AggregateRoot";
-import { AddressId, AddressType, Country, City} from "../value-objects/";
+import { AddressId, AddressType, Country, City, PostCode, Street, BuildingNumber, Apartment } from "../value-objects/";
 export class Address extends AggregateRoot {
     private readonly addressId: AddressId;
     private readonly type: AddressType;
     private readonly country: Country;
     private readonly city: City;
-    private readonly postCode: string;
-    private readonly street: string;
-    private buildingNumber?: string;
-    private apartment?: string;
+    private readonly postCode: PostCode;
+    private readonly street: Street;
+    private buildingNumber?: BuildingNumber;
+    private apartment?: Apartment;
     private isDefault: boolean;
 
     constructor(
@@ -16,11 +16,11 @@ export class Address extends AggregateRoot {
         type: AddressType,
         country: Country,
         city: City,
-        postCode: string,
-        street: string,
+        postCode: PostCode,
+        street: Street,
         isDefault: boolean,
-        buildingNumber?: string,
-        apartment?: string,
+        buildingNumber?: BuildingNumber,
+        apartment?: Apartment,
     ) {
         super(addressId.getValue());
         this.addressId = addressId;

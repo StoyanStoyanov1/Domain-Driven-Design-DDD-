@@ -9,7 +9,10 @@ import { AddressId } from "./AddressId";
 import { AddressType } from "./AddressType";
 import { Country } from "./Country";
 import { City } from "./City";
-
+import {PostCode} from "./PostCode";
+import { Street } from "./Street";
+import { BuildingNumber } from "./BuildungNumber";
+import { Apartment } from "./Apartment.ts";
 export { 
     Name,
     ProfileId,
@@ -22,4 +25,8 @@ export {
     AddressId,
     AddressType,
     City,
+    PostCode,
+    Street,
+    BuildingNumber,
+    Apartment,
 };
