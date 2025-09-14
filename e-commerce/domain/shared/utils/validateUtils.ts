@@ -5,6 +5,7 @@ const isValidPostcode = (value: string) => /^\d{3,5}$/.test(value);
 const isValidStreet = (value: string) => /^(?=.*\p{L})[\p{L} -]+$/u.test(value);
 const isValidBuildingNumber = (value: string) => /^[0-9]+[A-Za-z]?$/u.test(value);
 const isValidApartment = (value: string) => /^[0-9]+[A-Za-z]?$/u.test(value);
+const isvalidCardNumber = (value: string) => /^\d{3}-\d{2}-\d{4}$/.test(value);
 
 
 export const validateUtils = {
@@ -14,5 +15,6 @@ export const validateUtils = {
     isValidPostcode,
     isValidStreet,
     isValidBuildingNumber,
-    isValidApartment
+    isValidApartment,
+    isvalidCardNumber,
 };

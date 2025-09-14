@@ -13,6 +13,10 @@ import {PostCode} from "./PostCode";
 import { Street } from "./Street";
 import { BuildingNumber } from "./BuildungNumber";
 import { Apartment } from "./Apartment.ts";
+import { BankCardType } from "./BankCardType.ts";
+import { BankCardNumber } from "./BankCardNumber.ts";
+import { BankCardId } from "./BankCardId.ts";
+
 export { 
     Name,
     ProfileId,
@@ -29,4 +33,7 @@ export {
     Street,
     BuildingNumber,
     Apartment,
+    BankCardType,
+    BankCardNumber,
+    BankCardId,
 };
