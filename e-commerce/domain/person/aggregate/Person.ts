@@ -10,6 +10,9 @@ export class Person extends AggregateRoot {
     private readonly profile: Profile;
     private readonly addresses: Address[];
     private readonly bankCards: BankCard[];
+    private readonly createdAt: Date = new Date();
+
+    private updatedAt: Date = new Date();
 
     constructor(
         personId: PersonId,
@@ -37,6 +40,10 @@ export class Person extends AggregateRoot {
 
     getBankCards(): BankCard[] {
         return this.bankCards;
+    }
+
+    getCreatedAt(): Date {
+        return this.createdAt;
     }
 
     //Setters
@@ -117,7 +124,7 @@ export class Person extends AggregateRoot {
             if (addressResult.isFailure) {
                 return Result.fail<Address>(addressResult.getError());
             }
-
+            this.updatedAt = new Date();
             this.addAddress(addressResult.getValue());
             return Result.ok<Address>(addressResult.getValue());
         } catch (error) {
@@ -133,7 +140,7 @@ export class Person extends AggregateRoot {
             }
 
             this.addBankCard(bankCardResult.getValue());
-
+            this.updatedAt = new Date();
             return Result.ok<BankCard>(bankCardResult.getValue());
         } catch (error) {
             return Result.fail<BankCard>(error.message);

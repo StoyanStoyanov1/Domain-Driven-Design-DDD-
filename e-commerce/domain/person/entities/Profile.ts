@@ -9,7 +9,9 @@ export class Profile extends AggregateRoot {
     private readonly firstName: Name;
     private readonly lastName: Name;
     private readonly dateOfBirth: DateOfBirth;
+    private readonly createdAt: Date = new Date();
 
+    private updatedAt: Date = new Date();
     private gender: Gender;
     private middleName?: Name;
     private username?: Username;

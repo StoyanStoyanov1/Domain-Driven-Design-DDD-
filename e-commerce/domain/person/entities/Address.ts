@@ -8,6 +8,9 @@ export class Address extends AggregateRoot {
     private readonly city: City;
     private readonly postCode: PostCode;
     private readonly street: Street;
+    private readonly createdAt: Date = new Date();
+    
+    private updatedAt: Date = new Date();
     private buildingNumber?: BuildingNumber;
     private apartment?: Apartment;
     private isDefault: boolean;
@@ -83,6 +86,14 @@ export class Address extends AggregateRoot {
 
     setIsDefault(isDefault: boolean): void {
         this.isDefault = isDefault;
+    }
+
+    getCreatedAt(): Date {
+        return this.createdAt;
+    }
+
+    getUpdatedAt(): Date {
+        return this.updatedAt;
     }
 
     //Factory method

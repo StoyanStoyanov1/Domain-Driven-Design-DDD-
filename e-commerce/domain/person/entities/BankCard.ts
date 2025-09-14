@@ -7,6 +7,7 @@ export class BankCard extends AggregateRoot {
     private readonly cardType: BankCardType;
     private readonly cardNumber: BankCardNumber;
     private readonly CVC: string;
+    private createdAt: Date = new Date();
 
     private  isValid: boolean;
 
@@ -65,6 +66,10 @@ export class BankCard extends AggregateRoot {
     getCVC(): string {
         return this.CVC;
     }  
+
+    getCreatedAt(): Date {
+        return this.createdAt;
+    }
     
     //setters
 
