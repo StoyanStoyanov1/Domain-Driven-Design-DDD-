@@ -9,7 +9,7 @@ export class Address extends AggregateRoot {
     private readonly postCode: PostCode;
     private readonly street: Street;
     private readonly createdAt: Date = new Date();
-    
+
     private updatedAt: Date = new Date();
     private buildingNumber?: BuildingNumber;
     private apartment?: Apartment;
@@ -39,39 +39,39 @@ export class Address extends AggregateRoot {
     }
 
     //Getters
-    getAddressId(): AddressId {
+    get addressIdValue(): AddressId {
         return this.addressId;
     }
 
-    getAddressType(): AddressType {
+    get addressTypeValue(): AddressType {
         return this.addressType;
     }
 
-    getCountry(): Country {
+    get countryValue(): Country {
         return this.country;
     }
 
-    getCity(): City {
+    get cityValue(): City {
         return this.city;
     }
 
-    getPostCode(): PostCode {
+    get postCodeValue(): PostCode {
         return this.postCode;
     }
 
-    getStreet(): Street {
+    get streetValue(): Street {
         return this.street;
     }
 
-    getBuildingNumber(): BuildingNumber | undefined {
+    get buildingNumberValue(): BuildingNumber | undefined {
         return this.buildingNumber;
     }
 
-    getApartment(): Apartment | undefined {
+    get apartmentValue(): Apartment | undefined {
         return this.apartment;
     }
 
-    isDefaultAddress(): boolean {
+    get isDefaultAddress(): boolean {
         return this.isDefault;
     }
 

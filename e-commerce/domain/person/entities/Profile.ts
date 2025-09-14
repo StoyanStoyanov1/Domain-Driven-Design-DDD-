@@ -73,40 +73,48 @@ export class Profile extends AggregateRoot {
     }
 
     //Getters
-    getProfileId(): ProfileId {
+    get profileIdValue(): ProfileId {
         return this.profileId;
     }
 
-    getFirstName(): Name {
+    get firstNameValue(): Name {
         return this.firstName;
     }
 
-    getLastName(): Name {
+    get lastNameValue(): Name {
         return this.lastName;
     }
 
-    getMiddleName(): Name | undefined {
+    get middleNameValue(): Name | undefined {
         return this.middleName;
     }
 
-    getDateOfBirth(): DateOfBirth {
+    get dateOfBirthValue(): DateOfBirth {
         return this.dateOfBirth;
     }
 
-    getGender(): Gender {
+    get genderValue(): Gender {
         return this.gender;
     }   
 
-    getUsername(): Username | undefined {
+    get usernameValue(): Username | undefined {
         return this.username;
     }
 
-    getPhoneNumber(): PhoneNumber | undefined {
+    get phoneNumberValue(): PhoneNumber | undefined {
         return this.phoneNumber;
     }
 
-    getAvatar(): Avatar | undefined {
+    get avatarValue(): Avatar | undefined {
         return this.avatar;
+    }
+
+    get createdAtValue(): Date {
+        return this.createdAt;
+    }
+
+    get updatedAtValue(): Date {
+        return this.updatedAt;
     }
 
     // Setters for optional fields

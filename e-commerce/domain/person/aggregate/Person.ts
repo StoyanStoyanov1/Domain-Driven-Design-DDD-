@@ -26,23 +26,23 @@ export class Person extends AggregateRoot {
     }
 
     //Getters
-    getPersonId(): PersonId {
+    get personIdValue(): PersonId {
         return this.personId;
     }
 
-    getProfile(): Profile {
+    get profileValue(): Profile {
         return this.profile;
     }
 
-    getAddresses(): Address[] {
+    get addressesValue(): Address[] {
         return this.addresses;
     }
 
-    getBankCards(): BankCard[] {
+    get bankCardsValue(): BankCard[] {
         return this.bankCards;
     }
 
-    getCreatedAt(): Date {
+    get createdAtValue(): Date {
         return this.createdAt;
     }
 
@@ -105,7 +105,7 @@ export class Person extends AggregateRoot {
             if (this.addresses.length === 0) {
                 isDefault = true;
             } else if (isDefault) {
-                this.addresses.forEach(addr => addr.isDefaultAddress() && addr.setIsDefault(false));
+                this.addresses.forEach(addr => addr.isDefaultAddress && addr.setIsDefault(false));
             } else {
                 isDefault = false;
             }
