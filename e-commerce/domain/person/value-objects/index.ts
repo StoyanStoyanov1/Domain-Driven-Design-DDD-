@@ -16,6 +16,7 @@ import { Apartment } from "./Apartment.ts";
 import { BankCardType } from "./BankCardType.ts";
 import { BankCardNumber } from "./BankCardNumber.ts";
 import { BankCardId } from "./BankCardId.ts";
+import { PersonId } from "./PersonId.ts";
 
 export { 
     Name,
@@ -36,4 +37,5 @@ export {
     BankCardType,
     BankCardNumber,
     BankCardId,
+    PersonId,
 };
