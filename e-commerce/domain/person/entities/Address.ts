@@ -71,6 +71,7 @@ export class Address extends AggregateRoot {
     isDefaultAddress(): boolean {
         return this.isDefault;
     }
+    
     //Setters
     setBuildingNumber(buildingNumber: string): void {
         this.buildingNumber = BuildingNumber.create(buildingNumber).getValue();

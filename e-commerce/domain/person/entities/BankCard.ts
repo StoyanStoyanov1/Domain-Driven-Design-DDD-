@@ -1,3 +1,4 @@
+import { Result } from "../../shared/core";
 import { AggregateRoot } from "../../shared/domain/AggregateRoot";
 import { BankCardNumber, BankCardType, BankCardId} from "../value-objects/";
 
@@ -5,8 +6,9 @@ export class BankCard extends AggregateRoot {
     private readonly bankCardId: BankCardId;
     private readonly cardType: BankCardType;
     private readonly cardNumber: BankCardNumber;
-    private readonly isValid: boolean;
     private readonly CVC: string;
+
+    private  isValid: boolean;
 
     private constructor(
         bankCardId: BankCardId,
@@ -23,5 +25,51 @@ export class BankCard extends AggregateRoot {
         this.CVC = CVC;
     }
 
+    static create(
+        cardType: BankCardType,
+        cardNumber: BankCardNumber,
+        isValid: boolean,
+        CVC: string
+    ): Result<BankCard> {
+        try {
+            const bankCard = new BankCard(
+                BankCardId.create().getValue(),
+                BankCardType.create(cardType.getValue()).getValue(),
+                BankCardNumber.create(cardNumber.getValue()).getValue(),
+                isValid,
+                CVC
+            );
+            return Result.ok<BankCard>(bankCard);
+        } catch (error: any) {
+            return Result.fail<BankCard>(error.message);
+        }
+    }
+
+    //getters
+    getId(): string {
+        return this.bankCardId.getValue();
+    }
+
+    getCardType(): string {
+        return this.cardType.getValue();
+    }
+
+    getCardNumber(): string {
+        return this.cardNumber.getValue();
+    }
+
+    getIsValid(): boolean {
+        return this.isValid;
+    }
+
+    getCVC(): string {
+        return this.CVC;
+    }  
     
+    //setters
+
+    setIsValid(isValid: boolean): void {
+        this.isValid = isValid;
+    }
+
 }
