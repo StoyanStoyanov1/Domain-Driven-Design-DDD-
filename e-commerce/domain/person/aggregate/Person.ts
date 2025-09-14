@@ -8,8 +8,8 @@ export class Person extends AggregateRoot {
 
     private readonly personId: PersonId;
     private readonly profile: Profile;
-    private addresses: Address[];
-    private bankCards: BankCard[];
+    private readonly addresses: Address[];
+    private readonly bankCards: BankCard[];
 
     constructor(
         personId: PersonId,
@@ -81,6 +81,62 @@ export class Person extends AggregateRoot {
         } catch (error) {
             console.error(Person.ERROR_CREATING_PERSON, error);
             return Result.fail(Person.ERROR_CREATING_PERSON);
+        }
+    }
+
+    createNewAddress(
+        addressType: string,
+        country: string,
+        city: string,
+        postCode: string,
+        street: string,
+        buildingNumber?: string,
+        apartment?: string,
+        isDefault?: boolean,
+    ): Result<Address> {
+        try {
+            if (this.addresses.length === 0) {
+                isDefault = true;
+            } else if (isDefault) {
+                this.addresses.forEach(addr => addr.isDefaultAddress() && addr.setIsDefault(false));
+            } else {
+                isDefault = false;
+            }
+
+            const addressResult = Address.create(
+                addressType,
+                country,
+                city,
+                postCode,
+                street,
+                isDefault,
+                buildingNumber,
+                apartment
+            );
+
+            if (addressResult.isFailure) {
+                return Result.fail<Address>(addressResult.getError());
+            }
+
+            this.addAddress(addressResult.getValue());
+            return Result.ok<Address>(addressResult.getValue());
+        } catch (error) {
+            return Result.fail<Address>(error.message);
+        }
+    }
+
+    createNewBankCard(cardType: string, cardNumber: string, isValid: boolean, cvc: string): Result<BankCard> {
+        try {
+            const bankCardResult = BankCard.create(cardType, cardNumber, isValid, cvc);
+            if (bankCardResult.isFailure) {
+                return Result.fail<BankCard>(bankCardResult.getError());
+            }
+
+            this.addBankCard(bankCardResult.getValue());
+
+            return Result.ok<BankCard>(bankCardResult.getValue());
+        } catch (error) {
+            return Result.fail<BankCard>(error.message);
         }
     }
 }

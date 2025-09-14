@@ -26,16 +26,16 @@ export class BankCard extends AggregateRoot {
     }
 
     static create(
-        cardType: BankCardType,
-        cardNumber: BankCardNumber,
+        cardType: string,
+        cardNumber: string,
         isValid: boolean,
         CVC: string
     ): Result<BankCard> {
         try {
             const bankCard = new BankCard(
                 BankCardId.create().getValue(),
-                BankCardType.create(cardType.getValue()).getValue(),
-                BankCardNumber.create(cardNumber.getValue()).getValue(),
+                BankCardType.create(cardType).getValue(),
+                BankCardNumber.create(cardNumber).getValue(),
                 isValid,
                 CVC
             );
