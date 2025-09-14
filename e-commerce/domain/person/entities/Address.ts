@@ -75,6 +75,14 @@ export class Address extends AggregateRoot {
         return this.isDefault;
     }
 
+    get createdAtValue(): Date {
+        return this.createdAt;
+    }
+
+    get updatedAtValue(): Date {
+        return this.updatedAt;
+    }
+
     //Setters
     setBuildingNumber(buildingNumber: string): void {
         this.buildingNumber = BuildingNumber.create(buildingNumber).getValue();
@@ -86,14 +94,6 @@ export class Address extends AggregateRoot {
 
     setIsDefault(isDefault: boolean): void {
         this.isDefault = isDefault;
-    }
-
-    getCreatedAt(): Date {
-        return this.createdAt;
-    }
-
-    getUpdatedAt(): Date {
-        return this.updatedAt;
     }
 
     //Factory method

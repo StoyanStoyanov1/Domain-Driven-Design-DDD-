@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Set default status to ACTIVE in Product class constructor and remove status parameter" />
+    <list default="true" id="9fe53a74-e876-4ba4-99fc-e352d18ad09a" name="Changes" comment="feat: Set default status to ACTIVE in Product class constructor and remove status parameter">
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/person/entities/Address.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/person/entities/Address.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/e-commerce/domain/person/entities/BankCard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e-commerce/domain/person/entities/BankCard.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +103,7 @@
       <workItem from="1757450687412" duration="4000" />
       <workItem from="1757482546783" duration="7000" />
       <workItem from="1757574601150" duration="1457000" />
-      <workItem from="1757576119594" duration="21571000" />
+      <workItem from="1757576119594" duration="22781000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project structure with core domain entities and configuration files.">
       <option name="closed" value="true" />

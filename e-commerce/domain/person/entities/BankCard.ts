@@ -47,16 +47,16 @@ export class BankCard extends AggregateRoot {
     }
 
     //getters
-    get idValue(): string {
-        return this.bankCardId.getValue();
+    get idValue(): BankCardId {
+        return this.bankCardId;
     }
 
-    get cardTypeValue(): string {
-        return this.cardType.getValue();
+    get cardTypeValue(): BankCardType {
+        return this.cardType;
     }
 
-    get cardNumberValue(): string {
-        return this.cardNumber.getValue();
+    get cardNumberValue(): BankCardNumber {
+        return this.cardNumber;
     }
 
     get isValidValue(): boolean {
