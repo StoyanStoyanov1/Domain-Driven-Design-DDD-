@@ -3,6 +3,10 @@ import { Profile, Address, BankCard } from "../entities/";
 import { PersonId } from "../value-objects";
 import { Result } from "../../shared/core/Result";
 
+import { PersonProfileUpdated } from "../events/PersonProfileUpdated";
+import { PersonAddressUpdated } from "../events/PersonAddressUpdated";
+import { PersonBankCardUpdated } from "../events/PersonBankCardUpdated";
+
 export class Person extends AggregateRoot {
     static readonly ERROR_CREATING_PERSON = 'Error creating person';
     static readonly NOT_FOUND = 'not found!';
@@ -157,7 +161,7 @@ export class Person extends AggregateRoot {
         }
     }
 
-      updateProfile(
+    updateProfile(
         middleName?: string,
         gender?: string,
         username?: string,
@@ -167,23 +171,31 @@ export class Person extends AggregateRoot {
         const hasInput = [middleName, gender, username, phoneNumber].some(Boolean);
         if (!hasInput) throw new Error(Person.ERROR_UPDATING);
 
-        if (middleName) this.profile.setMiddleName(middleName);
-        if (gender) this.profile.setGender(gender);
-        if (username) this.profile.setUsername(username);
-        if (phoneNumber) this.profile.setPhoneNumber(phoneNumber);
-        if (avatar) this.profile.setAvatar(avatar);
+        const updatedFields: string[] = [];
+        if (middleName) { this.profile.setMiddleName(middleName); updatedFields.push('middleName'); }
+        if (gender) { this.profile.setGender(gender); updatedFields.push('gender'); }
+        if (username) { this.profile.setUsername(username); updatedFields.push('username'); }
+        if (phoneNumber) { this.profile.setPhoneNumber(phoneNumber); updatedFields.push('phoneNumber'); }
+        if (avatar) { this.profile.setAvatar(avatar); updatedFields.push('avatar'); }
         this.profile.setUpdatedAt();
         this.setUpdatedAt();
+
+        this.addDomainEvent(new PersonProfileUpdated(this.personId.getValue(), updatedFields));
+
     }
 
     updateAddress(addressId: string, buildingNumber?: string, apartment?: string): void {
         const address = this.addresses.find(addr => addr.addressIdValue.getValue() === addressId);
         if (!address) throw new Error('Address ' + Person.NOT_FOUND);
         if (!apartment && !buildingNumber) throw new Error(Person.ERROR_UPDATING);
-        if (buildingNumber) address.setBuildingNumber(buildingNumber);
-        if (apartment) address.setApartment(apartment);
-        address.setUpdatedAt()
+
+        const updatedFields: string[] = [];
+        if (buildingNumber) { address.setBuildingNumber(buildingNumber); updatedFields.push('buildingNumber'); }
+        if (apartment) { address.setApartment(apartment); updatedFields.push('apartment'); }
+        address.setUpdatedAt();
         this.setUpdatedAt();
+
+        this.addDomainEvent(new PersonAddressUpdated(this.personId.getValue(), addressId, updatedFields));
     }
 
     updateBankCardStatus(bankCardId: string): void {
@@ -192,6 +204,8 @@ export class Person extends AggregateRoot {
         bankCard.changeValidStatus();
         bankCard.setUpdatedAt();
         this.setUpdatedAt();
+
+        this.addDomainEvent(new PersonBankCardUpdated(this.personId.getValue(), bankCardId, ['isValid']));
     }
 
 }
