@@ -96,6 +96,10 @@ export class Address extends AggregateRoot {
         this.isDefault = isDefault;
     }
 
+    setUpdatedAt(): void {
+        this.updatedAt = new Date();
+    }
+
     //Factory method
     static create(
         addressType: string,
@@ -125,4 +129,7 @@ export class Address extends AggregateRoot {
         }
 
     }
+
+    
+    
 }

@@ -5,6 +5,8 @@ import { Result } from "../../shared/core/Result";
 
 export class Person extends AggregateRoot {
     static readonly ERROR_CREATING_PERSON = 'Error creating person';
+    static readonly NOT_FOUND = 'not found!';
+    static readonly ERROR_UPDATING = 'Error updating!';
 
     private readonly personId: PersonId;
     private readonly profile: Profile;
@@ -46,6 +48,10 @@ export class Person extends AggregateRoot {
         return this.createdAt;
     }
 
+    get updatedAtValue(): Date {
+        return this.updatedAt;
+    }
+
     //Setters
 
     addAddress(address: Address): void {
@@ -54,6 +60,10 @@ export class Person extends AggregateRoot {
 
     addBankCard(bankCard: BankCard): void {
         this.bankCards.push(bankCard);
+    }
+
+    setUpdatedAt(): void {
+        this.updatedAt = new Date();
     }
 
     static create(
@@ -140,10 +150,48 @@ export class Person extends AggregateRoot {
             }
 
             this.addBankCard(bankCardResult.getValue());
-            this.updatedAt = new Date();
+            this.setUpdatedAt();
             return Result.ok<BankCard>(bankCardResult.getValue());
         } catch (error) {
             return Result.fail<BankCard>(error.message);
         }
     }
+
+      updateProfile(
+        middleName?: string,
+        gender?: string,
+        username?: string,
+        phoneNumber?: string,
+        avatar?: string
+    ): void {
+        const hasInput = [middleName, gender, username, phoneNumber].some(Boolean);
+        if (!hasInput) throw new Error(Person.ERROR_UPDATING);
+
+        if (middleName) this.profile.setMiddleName(middleName);
+        if (gender) this.profile.setGender(gender);
+        if (username) this.profile.setUsername(username);
+        if (phoneNumber) this.profile.setPhoneNumber(phoneNumber);
+        if (avatar) this.profile.setAvatar(avatar);
+        this.profile.setUpdatedAt();
+        this.setUpdatedAt();
+    }
+
+    updateAddress(addressId: string, buildingNumber?: string, apartment?: string): void {
+        const address = this.addresses.find(addr => addr.addressIdValue.getValue() === addressId);
+        if (!address) throw new Error('Address ' + Person.NOT_FOUND);
+        if (!apartment && !buildingNumber) throw new Error(Person.ERROR_UPDATING);
+        if (buildingNumber) address.setBuildingNumber(buildingNumber);
+        if (apartment) address.setApartment(apartment);
+        address.setUpdatedAt()
+        this.setUpdatedAt();
+    }
+
+    updateBankCardStatus(bankCardId: string): void {
+        const bankCard = this.bankCards.find(card => card.idValue.getValue() === bankCardId);
+        if (!bankCard) throw new Error('BankCard ' + Person.NOT_FOUND);
+        bankCard.changeValidStatus();
+        bankCard.setUpdatedAt();
+        this.setUpdatedAt();
+    }
+
 }

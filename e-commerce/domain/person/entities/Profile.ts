@@ -138,4 +138,8 @@ export class Profile extends AggregateRoot {
         this.gender = Gender.create(gender).getValue();
     }
 
+    setUpdatedAt(): void {
+        this.updatedAt = new Date();
+    }
+
 }

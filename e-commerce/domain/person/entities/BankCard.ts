@@ -7,9 +7,10 @@ export class BankCard extends AggregateRoot {
     private readonly cardType: BankCardType;
     private readonly cardNumber: BankCardNumber;
     private readonly CVC: string;
-    private createdAt: Date = new Date();
+    private readonly createdAt: Date = new Date();
 
-    private  isValid: boolean;
+    private isValid: boolean;
+    private updatedAt: Date = new Date();
 
     private constructor(
         bankCardId: BankCardId,
@@ -71,10 +72,17 @@ export class BankCard extends AggregateRoot {
         return this.createdAt;
     }
     
+    get updatedAtValue(): Date {
+        return this.updatedAt;
+    }
     //setters
 
-    setIsValid(isValid: boolean): void {
-        this.isValid = isValid;
+    changeValidStatus(): void {
+        this.isValid = !this.isValid;
+    }
+
+    setUpdatedAt(): void {
+        this.updatedAt = new Date();
     }
 
 }
