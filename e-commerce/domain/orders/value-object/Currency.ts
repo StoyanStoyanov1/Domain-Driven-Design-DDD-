@@ -1,6 +1,6 @@
 import { Result } from "../../shared/core";
 import {ValueObject} from "../../shared/domain/ValueObject";
-import {currencyChoices} from "../enums/";
+import {currencyChoices} from "../enums";
 export class Currency extends ValueObject<string>{
     static readonly IS_REQUIRED = 'Currency is required';
     static readonly MUST_BE_STRING = 'Currency must be a string';

@@ -1,5 +1,5 @@
 import { Entity } from "../../shared/domain/Entity";
-import { OrderId, CustomerId, Currency, PaymentMethod, PaymentStatus, OrderStatus } from "../value-object/";
+import { OrderId, CustomerId, Currency, PaymentMethod, PaymentStatus, OrderStatus } from "../value-object";
 
 export class Order extends Entity { 
     private readonly orderId: OrderId; 
