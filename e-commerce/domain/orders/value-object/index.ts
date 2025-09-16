@@ -9,6 +9,7 @@ import { PaymentStatus } from "./PaymentStatus";
 import { PaymentMethod } from "./PaymentMethod";
 import { Note } from "./Note";
 import { Quantity } from "./Quantity";
+import { PrecentageDiscount } from "./PrecentageDiscount";
 
 export {
     OrderId,
@@ -22,4 +23,5 @@ export {
     PaymentMethod,
     Note,
     Quantity,
+    PrecentageDiscount,
 }
