@@ -7,6 +7,7 @@ import { Currency } from "./Currency";
 import { OrderStatus } from "./OrderStatus";
 import { PaymentStatus } from "./PaymentStatus";
 import { PaymentMethod } from "./PaymentMethod";
+import { Note } from "./Note";
 
 export {
     OrderId,
@@ -18,4 +19,5 @@ export {
     OrderStatus,
     PaymentStatus,
     PaymentMethod,
+    Note,
 }

@@ -1,5 +1,5 @@
 import { AggregateRoot } from "../../shared/domain/AggregateRoot";
-import { OrderId, CustomerId, Currency, PaymentMethod, PaymentStatus, OrderStatus, Price } from "../value-object";
+import { OrderId, CustomerId, Currency, PaymentMethod, PaymentStatus, OrderStatus, Price, Note } from "../value-object";
 import { OrderItem } from '../entities/OrderItem'
 
 export class Order extends AggregateRoot { 
@@ -10,15 +10,15 @@ export class Order extends AggregateRoot {
     private readonly createdAt: Date;
     private readonly customerId: CustomerId;
 
+    private note: Note;
+
     private orderStatus: OrderStatus;
     private totalAmount: Price;
     private subtotal: Price;
     private vatAmount: Price;
-
     private currency: Currency;
     private paymentMethod: PaymentMethod;
     private paymentStatus: PaymentStatus;
-    private notes: string[] = [];
 
     constructor(
         orderId: OrderId, 
@@ -26,6 +26,7 @@ export class Order extends AggregateRoot {
         customerId: CustomerId,
         currency: Currency,
         paymentMethod: PaymentMethod,
+        note: Note,
         
     ) {
         super(orderId.getValue());
@@ -36,6 +37,7 @@ export class Order extends AggregateRoot {
         this.createdAt = new Date();
         this.currency = currency;
         this.paymentMethod = paymentMethod;
+        this.note = note;
     }
 
   
