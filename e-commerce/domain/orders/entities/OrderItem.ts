@@ -1,22 +1,22 @@
 import { Entity } from "../../shared/domain/Entity";
-import { OrderId, OrderItemId, ProductName, ProductPrice } from "../value-object";
+import { OrderId, OrderItemId, ProductName, Price, Quantity } from "../value-object";
 
 export class OrderItem extends Entity {
     private readonly orderItemId: OrderItemId;
     private readonly orderId: OrderId;
     private readonly productName: ProductName;
     private readonly sku: string;
-    private productPrice: ProductPrice;
-    private quantity: number;
-    private totalPrice: ProductPrice;
+    private productPrice: Price;
+    private quantity: Quantity;
+    private totalPrice: Price;
 
     constructor(
         orderItemId: OrderItemId,
         orderId: OrderId,
         productName: ProductName,
         sku: string,
-        productPrice: ProductPrice,
-        quantity: number
+        productPrice: Price,
+        quantity: Quantity
     ) {
         super(orderItemId.getValue());
         this.validate(quantity);
@@ -30,20 +30,19 @@ export class OrderItem extends Entity {
         this.totalPrice = this.calculateTotalPrice();
     }
 
-    private calculateTotalPrice(): ProductPrice {
-        const total = this.productPrice.getValue() * this.quantity;
-        return ProductPrice.create(total).getValue(); 
+    private calculateTotalPrice(): Price {
+        const total = this.productPrice.getValue() * this.quantity.getValue();
+        return Price.create(total).getValue(); 
     }
 
-    private validate(quantity: number): void {
-        if (quantity < 0) {
+    private validate(quantity: Quantity): void {
+        if (quantity.getValue() < 0) {
             throw new Error('Quantity must be greater than or equal to 0'); 
         }
     }
 
     updateQuantity(newQuantity: number): void {
-        this.validate(newQuantity);
-        this.quantity = newQuantity;
+        this.quantity = Quantity.create(newQuantity);
         this.totalPrice = this.calculateTotalPrice();
     }
 
@@ -55,24 +54,24 @@ export class OrderItem extends Entity {
         if (amount <= 0) {
             throw new Error('Amount must be positive');
         }
-        this.updateQuantity(this.quantity + amount);
+        this.updateQuantity(this.quantity.getValue() + amount);
     }
 
-    getTotalPrice(): ProductPrice { return this.totalPrice; }
-    getQuantity(): number { return this.quantity; }
+    getTotalPrice(): Price { return this.totalPrice; }
+    getQuantity(): Quantity { return this.quantity; }
     getOrderItemId(): OrderItemId { return this.orderItemId; }
     getOrderId(): OrderId { return this.orderId; }
     getProductName(): ProductName { return this.productName; }
     getSku(): string { return this.sku; }
-    getProductPrice(): ProductPrice { return this.productPrice; }
+    getProductPrice(): Price { return this.productPrice; }
 
     static create(
         orderItemId: OrderItemId,
         orderId: OrderId,
         productName: ProductName,
         sku: string,
-        productPrice: ProductPrice,
-        quantity: number
+        productPrice: Price,
+        quantity: Quantity,
     ): OrderItem {
         return new OrderItem(
             orderItemId,

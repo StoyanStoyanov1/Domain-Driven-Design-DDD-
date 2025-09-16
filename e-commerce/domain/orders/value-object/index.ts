@@ -8,6 +8,7 @@ import { OrderStatus } from "./OrderStatus";
 import { PaymentStatus } from "./PaymentStatus";
 import { PaymentMethod } from "./PaymentMethod";
 import { Note } from "./Note";
+import { Quantity } from "./Quantity";
 
 export {
     OrderId,
@@ -20,4 +21,5 @@ export {
     PaymentStatus,
     PaymentMethod,
     Note,
+    Quantity,
 }
