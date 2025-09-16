@@ -1,10 +1,10 @@
-import { AggregateRoot } from "../../shared/domain/AggregateRoot";
+import { Entity } from "../../shared/domain/Entity";
 import {
     Name, ProfileId, Gender, Username, PhoneNumber, DateOfBirth, Avatar
 } from "../value-objects";
 import { Result } from "../../shared/core";
 
-export class Profile extends AggregateRoot {
+export class Profile extends Entity {
     private readonly profileId: ProfileId;
     private readonly firstName: Name;
     private readonly lastName: Name;

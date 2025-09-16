@@ -1,8 +1,8 @@
 import { Result } from "../../shared/core";
-import { AggregateRoot } from "../../shared/domain/AggregateRoot";
+import { Entity } from "../../shared/domain/Entity";
 import { BankCardNumber, BankCardType, BankCardId} from "../value-objects/";
 
-export class BankCard extends AggregateRoot {
+export class BankCard extends Entity {
     private readonly bankCardId: BankCardId;
     private readonly cardType: BankCardType;
     private readonly cardNumber: BankCardNumber;

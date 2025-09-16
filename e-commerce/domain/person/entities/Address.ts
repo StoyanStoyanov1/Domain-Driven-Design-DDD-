@@ -1,7 +1,7 @@
 import { Result } from "../../shared/core";
-import { AggregateRoot } from "../../shared/domain/AggregateRoot";
+import { Entity } from "../../shared/domain/Entity";
 import { AddressId, AddressType, Country, City, PostCode, Street, BuildingNumber, Apartment } from "../value-objects/";
-export class Address extends AggregateRoot {
+export class Address extends Entity {
     private readonly addressId: AddressId;
     private readonly addressType: AddressType;
     private readonly country: Country;
