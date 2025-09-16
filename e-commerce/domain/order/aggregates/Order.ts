@@ -10,6 +10,7 @@ export class Order extends AggregateRoot {
     private readonly createdAt: Date;
     private readonly customerId: CustomerId;
 
+    private updatedAt: Date;
     private note: Note;
 
     private orderStatus: OrderStatus;
