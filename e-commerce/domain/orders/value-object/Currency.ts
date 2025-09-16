@@ -1,9 +1,8 @@
 import { Result } from "../../shared/core";
 import {ValueObject} from "../../shared/domain/ValueObject";
-import {currencyChoices} from "../enums";
+import {CurrencyChoices, CurrencyType} from "../types";
 export class Currency extends ValueObject<string>{
     static readonly IS_REQUIRED = 'Currency is required';
-    static readonly MUST_BE_STRING = 'Currency must be a string';
     static readonly INVALID_CURRENCY = 'Invalid currency';
 
     constructor(value: string) {
@@ -16,12 +15,10 @@ export class Currency extends ValueObject<string>{
             throw new Error(Currency.IS_REQUIRED);
         }
 
-        if (typeof value !== 'string') {
-            throw new Error(Currency.MUST_BE_STRING);
-        }
+        const currencyIsValid = Object.values(CurrencyChoices).includes(value as CurrencyType);
 
-        if (!(value in currencyChoices)) {
-            throw new Error(Currency.INVALID_CURRENCY);
+        if (currencyIsValid) {
+            throw Error(Currency.INVALID_CURRENCY);
         }
     }
 

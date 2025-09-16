@@ -1,8 +1,11 @@
 import { ValueObject } from "../../shared/domain/ValueObject";
-import { paymentStatusChoices } from "../enums";
+import { PaymentMethodChoices, PaymentMethodType } from "../types";
 import { Result } from "../../shared/core";
 
 export class PaymentStatus extends ValueObject<string> {
+    static readonly IS_REQUIRED = 'Payment status is required!';
+    static readonly INVALID_STATUS = 'Invalid payment status';
+
     private constructor(value: string) {
         const normalizedValue = value.trim().toUpperCase();
         super(normalizedValue);
@@ -12,11 +15,12 @@ export class PaymentStatus extends ValueObject<string> {
     protected validate(value: string): void {
 
         if (!value) {
-            throw new Error('Payment status is required');
+            throw new Error(PaymentStatus.IS_REQUIRED);
         }
-        const paymentStatusChoicesArray: string[] = Object.values(paymentStatusChoices);
-        if (!paymentStatusChoicesArray.includes(value)) {
-            throw new Error(`Invalid payment status: ${value}`);
+
+        const paymentStatusIsValid = Object.values(PaymentMethodChoices).includes(value as PaymentMethodType);
+        if (!paymentStatusIsValid) {
+            throw new Error(`${PaymentStatus.INVALID_STATUS}: ${value}`);
         }
     }
 
@@ -27,13 +31,5 @@ export class PaymentStatus extends ValueObject<string> {
             return Result.fail<PaymentStatus>(error.message);
         }
     }
-
-    // Factory methods for each payment status
-
-    static pending()   { return new PaymentStatus(paymentStatusChoices.PENDING); }
-    static paid()      { return new PaymentStatus(paymentStatusChoices.PAID); }
-    static failed()    { return new PaymentStatus(paymentStatusChoices.FAILED); }
-    static cancelled() { return new PaymentStatus(paymentStatusChoices.CANCELLED); }
-    static refunded()  { return new PaymentStatus(paymentStatusChoices.REFUNDED); }
 
 }
